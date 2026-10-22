@@ -72,4 +72,17 @@ Session: arena-d7395cfa (integration). All work uses the Arena-required branch `
 * PR #1 (first pass) merged 2026-10-22 00:07:17 UTC, merge commit `e9e1e6c`. Pages build/deploy run
   [#39697738661](https://github.com/sassnarep3-star/SAVINGS3/actions/runs/39697738661) succeeded.
 * PR #2 (first pass follow-up) merged, merge commit `bcb43a1`.
-* PR #3 (second pass / integration) — merge and deploy result recorded below once complete.
+* PR #3 (second pass / integration) — https://github.com/sassnarep3-star/SAVINGS3/pull/3 — merged successfully on
+  2026-10-22 at 00:12:36 UTC, merge commit `46808f35`. The pull-request validation run (build.py, check.py,
+  build_site.py, verify_site.py, generated-page freshness) passed before merge.
+* GitHub Pages (legacy publishing, source `main` / root) rebuilt for merge commit `46808f35` and reported
+  `status: built` at 2026-10-22 00:12:54 UTC. Live URLs:
+  * https://sassnarep3-star.github.io/SAVINGS3/ — the full dashboard (root `index.html`, replaced the earlier
+    redirect to `site/`)
+  * https://sassnarep3-star.github.io/SAVINGS3/site/ — the first pass's snapshot, unchanged
+* Post-deploy check: `index.html` served from `main` is the dashboard (13,032 bytes; `<h1>Savings Account Research
+  Dashboard</h1>`), `accounts.html` 35,749 bytes, `assets/style.css` 8,422 bytes, and `site/index.html` still present.
+  GitHub's Pages build status is the deployment confirmation; direct HTTP requests to `*.github.io` are outside
+  this sandbox's network allowlist.
+* No build, check or deploy failure occurred. No unresolved item blocks publication: all 19 flagged items are
+  published on `flagged.html` with sources.
