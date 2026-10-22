@@ -1,0 +1,50 @@
+{
+  "capture_date": "2026-10-22",
+  "insurance": {
+    "standard_limit": 250000,
+    "standard_rule": "$250,000 per depositor, per FDIC-insured bank, per ownership category; coverage is automatic for deposit accounts at an FDIC-insured bank.",
+    "source": "https://www.fdic.gov/resources/deposit-insurance/faq",
+    "trust_formula": "# owners x # beneficiaries x $250,000 = amount insured, not to exceed $1,250,000 per owner for all trust accounts",
+    "trust_source": "https://www.fdic.gov/resources/deposit-insurance/financial-products-insured",
+    "joint_rule": "Each co-owner's shares of every joint account at the same insured bank are added together and insured up to $250,000.",
+    "retirement_rule": "Certain retirement accounts (IRAs, self-directed 401k/profit-sharing, Keogh, 457) owned by the same person at the same bank are added together and insured up to $250,000.",
+    "covered_products": ["Checking accounts", "Savings accounts", "Money Market Deposit Accounts (MMDAs)", "Certificates of Deposit (CDs)"],
+    "not_covered": ["Mutual funds", "Annuities", "Life insurance policies", "Stocks and bonds", "Crypto assets", "Municipal securities", "Safe deposit contents"],
+    "not_covered_source": "https://www.fdic.gov/resources/deposit-insurance/",
+    "edie": "https://edie.fdic.gov/",
+    "bankfind": "https://banks.data.fdic.gov/bankfind-suite/bankfind",
+    "failures_source": "https://www.fdic.gov/bank-failures/when-bank-fails-facts-depositors-creditors-and-borrowers"
+  },
+  "structures": [
+    {
+      "structure": "Single-owner savings account, one bank",
+      "coverage": 250000,
+      "formula": "1 owner x $250,000",
+      "source": "https://www.fdic.gov/resources/deposit-insurance/financial-products-insured"
+    },
+    {
+      "structure": "Joint savings account (2 owners), one bank",
+      "coverage": 500000,
+      "formula": "2 co-owners x $250,000",
+      "source": "https://www.fdic.gov/resources/deposit-insurance/financial-products-insured"
+    },
+    {
+      "structure": "Single-owner account with 3 POD beneficiaries, one bank",
+      "coverage": 750000,
+      "formula": "1 owner x 3 beneficiaries x $250,000",
+      "source": "https://www.fdic.gov/resources/deposit-insurance/financial-products-insured"
+    },
+    {
+      "structure": "Single-owner account with 5 POD beneficiaries, one bank",
+      "coverage": 1250000,
+      "formula": "1 owner x 5 beneficiaries x $250,000 (equals the $1,250,000 per-owner trust cap)",
+      "source": "https://www.fdic.gov/resources/deposit-insurance/financial-products-insured"
+    },
+    {
+      "structure": "Single-owner accounts at 5 different FDIC-insured banks",
+      "coverage": 1250000,
+      "formula": "5 banks x $250,000",
+      "source": "https://www.fdic.gov/resources/deposit-insurance/faq"
+    }
+  ]
+}

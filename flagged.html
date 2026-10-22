@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review · Savings Account Research</title>
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> Savings Research</a>
+    <nav class="nav"><a href="index.html">Dashboard</a><a href="accounts.html">Accounts</a><a href="returns.html">Returns</a><a href="fdic-insurance.html">FDIC Coverage</a><a href="bonuses.html">Bonuses</a><a href="rates-competitiveness.html">Rate Check</a><a href="security-apps.html">App & Security</a><a href="flagged.html" class="active">Flagged</a><a href="methodology.html">Method</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="page-head">
+    <h1>Flagged for Review</h1>
+    <p class="sub">Every value left blank, every contradiction between official pages, and every number that was not used.</p>
+  </div>
+  
+<p class="lede">Nothing on this site was invented to fill a gap. Where an official source would not give up a
+number, the number is blank and the reason is recorded here with a link. These items do not block anything —
+they are the list to review after the site is live.</p>
+
+<div class="statline">
+  <span><strong>5</strong> high</span>
+  <span><strong>7</strong> medium</span>
+  <span><strong>7</strong> low</span>
+  <span><strong>19</strong> total</span>
+</div>
+
+<section class="section">
+  <div class="table-scroll">
+  <table class="table wide">
+    <thead><tr><th>Severity</th><th>Issue</th><th>Value used here</th>
+    <th>Value deliberately not used</th><th>What to do</th><th>Source</th></tr></thead>
+    <tbody><tr id="F01">
+  <td><span class="sev sev-high">High</span><span class="cell-sub">F01</span></td>
+  <td><strong>Synchrony Bank: two different APYs on the same official page</strong><span class="cell-sub">Synchrony&#x27;s High Yield Savings page prints 3.55% APY in the headline and again at the foot of the page, but its own savings calculator widget states &#x27;Our HYS APY 2.85%&#x27;. This repo uses 3.55% because it is the headline and the repeated footer value. The conflict is unresolved by Synchrony&#x27;s own page.</span></td>
+  <td>3.55% APY</td>
+  <td>2.85% APY</td>
+  <td>Confirm the live rate in the Synchrony app or by phone before opening.</td>
+  <td><a href="https://www.synchrony.com/banking/products/high-yield-savings" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F02">
+  <td><span class="sev sev-high">High</span><span class="cell-sub">F02</span></td>
+  <td><strong>Chase savings APY could not be verified</strong><span class="cell-sub">Chase&#x27;s official rate page refuses to render rates without a 5-digit ZIP code (&#x27;In order to see rates table, please provide valid 5-digit zip code&#x27;). No official Chase page captured in this session printed a savings APY.</span></td>
+  <td>blank</td>
+  <td>~0.01%-0.02% APY (third-party trackers, not used)</td>
+  <td>Enter the New York ZIP at chase.com to see the rate Chase will actually pay.</td>
+  <td><a href="https://www.chase.com/personal/savings/savings-account/interest-rates" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F03">
+  <td><span class="sev sev-high">High</span><span class="cell-sub">F03</span></td>
+  <td><strong>Citi savings APY could not be verified</strong><span class="cell-sub">The official Citi savings page injects the Accelerate Savings APY through a template placeholder (&#x27;:BLUE_AccSavings_Rate%&#x27;) that rendered no value. Citi&#x27;s footnote only states that the APY is accurate as of 10/21/2026.</span></td>
+  <td>blank</td>
+  <td>3.00% APY (third-party trackers, not used)</td>
+  <td>Check the rate inside the Citi app or with a Citi banker.</td>
+  <td><a href="https://www.citi.com/banking/savings-account" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F04">
+  <td><span class="sev sev-high">High</span><span class="cell-sub">F04</span></td>
+  <td><strong>TD Bank savings APYs could not be verified</strong><span class="cell-sub">TD&#x27;s Simple and Signature Savings rate tables render empty percentage cells until a location is selected. TD does print that &#x27;APY is accurate as of 10/21/2026&#x27;, but no number appears.</span></td>
+  <td>blank</td>
+  <td>not estimated</td>
+  <td>Select a New York location on TD&#x27;s rate page.</td>
+  <td><a href="https://www.td.com/us/en/personal-banking/savings-accounts/rates" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F08">
+  <td><span class="sev sev-high">High</span><span class="cell-sub">F08</span></td>
+  <td><strong>Discover Bank is shown as inactive by the FDIC</strong><span class="cell-sub">The FDIC API record for Discover Bank (certificate 5649, Greenwood, DE) returns ACTIVE = 0. Capital One&#x27;s help centre states Discover merged into Capital One on May 18, 2025 and that from November 18, 2025 Capital One and Discover deposit accounts are jointly insured; certain Discover CDs may stay separately insured until maturity. Discover is therefore excluded from the returns tables rather than counted as a separate $250,000 stack.</span></td>
+  <td>excluded from returns tables; one combined $250,000 Capital One limit</td>
+  <td>any Discover savings APY</td>
+  <td>None for a new account; do not count Capital One and Discover as two separate $250,000 banks.</td>
+  <td><a href="https://www.capitalone.com/help-center/discover-faqs/" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F06">
+  <td><span class="sev sev-med">Medium</span><span class="cell-sub">F06</span></td>
+  <td><strong>American Express National Bank FDIC certificate not retrieved</strong><span class="cell-sub">FDIC API queries by exact name, prefix wildcard and web address all returned no institution record for American Express National Bank, so the certificate number is blank here even though Amex states &#x27;Member FDIC&#x27; and publishes the $250,000 limit on its own pages.</span></td>
+  <td>blank certificate number</td>
+  <td>not guessed</td>
+  <td>Search FDIC BankFind manually; the record also appears on Amex&#x27;s account agreement.</td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=American%20Express%20National%20Bank" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F07">
+  <td><span class="sev sev-med">Medium</span><span class="cell-sub">F07</span></td>
+  <td><strong>U.S. Bank FDIC certificate not retrieved</strong><span class="cell-sub">The FDIC certificate number for U.S. Bank, National Association was not pulled through the FDIC API in this session, so the cell is blank even though U.S. Bank advertises FDIC insurance on its savings page.</span></td>
+  <td>blank certificate number</td>
+  <td>not guessed</td>
+  <td>Confirm the certificate number in BankFind.</td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=U.S.%20Bank" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F09">
+  <td><span class="sev sev-med">Medium</span><span class="cell-sub">F09</span></td>
+  <td><strong>Wells Fargo rate page defaulted to a California ZIP and prints no effective date</strong><span class="cell-sub">The captured Wells Fargo rate table was rendered for &#x27;CA, 94105&#x27; (the page&#x27;s default location), and none of the savings tables carry an effective date. A New York opening could show different numbers.</span></td>
+  <td>3.25% APY promotional tier / 0.01% standard, as displayed</td>
+  <td>no alternative substituted</td>
+  <td>Set the ZIP to a New York ZIP before relying on the rate.</td>
+  <td><a href="https://www.wellsfargo.com/savings-cds/rates/" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F10">
+  <td><span class="sev sev-med">Medium</span><span class="cell-sub">F10</span></td>
+  <td><strong>U.S. Bank rates were displayed for ZIP 55402</strong><span class="cell-sub">U.S. Bank&#x27;s rate sheet rendered for ZIP code 55402 (Minneapolis) by default and states that &#x27;APYs may vary by location&#x27;. The published tier structure is used here as displayed.</span></td>
+  <td>0.05% standard; 1.00% / 2.00% / 3.50% relationship tiers</td>
+  <td>no alternative substituted</td>
+  <td>Edit the ZIP on the U.S. Bank rate page to a New York ZIP.</td>
+  <td><a href="https://www.usbank.com/bank-accounts/savings-accounts/bank-smartly-savings/savings-account-interest-rates.html" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F13">
+  <td><span class="sev sev-med">Medium</span><span class="cell-sub">F13</span></td>
+  <td><strong>SoFi&#x27;s advertised $3M FDIC coverage is a sweep program, not a single-bank limit</strong><span class="cell-sub">SoFi advertises FDIC insurance &#x27;up to $3M through a network of participating banks&#x27;. A single FDIC-insured bank covers $250,000 per depositor per ownership category. Network programs depend on partner banks and program terms.</span></td>
+  <td>single-bank $250,000 used in the coverage model</td>
+  <td>$3M used as a single-bank limit</td>
+  <td>Read the SoFi program terms before depositing more than $250,000 at SoFi.</td>
+  <td><a href="https://www.sofi.com/banking/high-yield-savings-account/" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F14">
+  <td><span class="sev sev-med">Medium</span><span class="cell-sub">F14</span></td>
+  <td><strong>SoFi bonus tiers not fully extracted</strong><span class="cell-sub">SoFi advertises a &#x27;$50 or $400&#x27; cash bonus with eligible direct deposit of $1,000 or more, but the exact qualifying threshold for the $400 tier is in terms that were not fully captured.</span></td>
+  <td>&quot;$50 or $400&quot; as stated</td>
+  <td>no threshold guessed</td>
+  <td>Read SoFi&#x27;s bonus terms before applying.</td>
+  <td><a href="https://www.sofi.com/banking/high-yield-savings-account/" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F19">
+  <td><span class="sev sev-med">Medium</span><span class="cell-sub">F19</span></td>
+  <td><strong>Capital One&#x27;s own pages give two different start dates for joint Capital One/Discover FDIC coverage</strong><span class="cell-sub">The 360 Performance Savings FAQ says Capital One or Discover Bank deposit accounts &#x27;opened on or after May 18, 2025&#x27; are immediately counted together for FDIC coverage. Capital One&#x27;s Discover help centre says that &#x27;starting November 18, 2025&#x27; holders of both Capital One and Discover deposit accounts are jointly insured, with some CD exceptions. The merger closed May 18, 2025; the joint-insurance transition date is November 18, 2025.</span></td>
+  <td>November 18, 2025 (the more specific statement, from the Discover transition FAQ)</td>
+  <td>May 18, 2025 as the joint-insurance start date</td>
+  <td>Confirm current coverage in EDIE if you hold both brands.</td>
+  <td><a href="https://www.capitalone.com/help-center/discover-faqs/" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F05">
+  <td><span class="sev sev-low">Low</span><span class="cell-sub">F05</span></td>
+  <td><strong>Bank of America product page rendered unfilled fee placeholders</strong><span class="cell-sub">The Advantage Savings product page displayed &#x27;$XXXX or $0&#x27; and &#x27;$XXXX&#x27; where the monthly fee and the fee-waiver threshold belong - an unfilled template. The values shown on this site ($100 to open, $8 monthly fee, six-month new-account waiver, $500 daily-balance waiver) come from Bank of America&#x27;s Personal Schedule of Fees, effective August 7, 2026, not from the product page.</span></td>
+  <td>$100 minimum to open; $8.00 monthly fee</td>
+  <td>the &#x27;$XXXX&#x27; placeholder on the product page</td>
+  <td>Resolved from the official fee schedule. The product page itself is still broken at capture.</td>
+  <td><a href="https://www.bankofamerica.com/salesservices/deposits/resources/personal-schedule-fees/" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F11">
+  <td><span class="sev sev-low">Low</span><span class="cell-sub">F11</span></td>
+  <td><strong>Capital One product page rendered &#x27;NaN APY&#x27;</strong><span class="cell-sub">The 360 Performance Savings page displayed &#x27;NaN APY&#x27; (a JavaScript numeric error) instead of a percentage. The 3.20% APY was taken from Capital One&#x27;s own account-comparison page and application page, both of which print 3.20% APY effective 10/21/2026.</span></td>
+  <td>3.20% APY (from capitalone.com/bank/open-an-account/)</td>
+  <td>no alternative substituted</td>
+  <td>None; the alternate official page is authoritative.</td>
+  <td><a href="https://www.capitalone.com/bank/open-an-account/" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F12">
+  <td><span class="sev sev-low">Low</span><span class="cell-sub">F12</span></td>
+  <td><strong>Schwab prints no effective date next to its APY (Amex resolved)</strong><span class="cell-sub">Schwab&#x27;s Investor Savings page states 0.15% APY without saying when it took effect, so its &#x27;APY as of&#x27; cell is blank and the capture date (2026-10-22) is recorded instead. American Express was in the same position on its product page, but its information-protection page carries the disclosure &#x27;The Annual Percentage Yield (APY) as advertised is accurate as of 10/21/2026&#x27;, so Amex now shows 2026-10-21.</span></td>
+  <td>0.15% APY (Schwab) with no as-of date; 3.20% APY as of 2026-10-21 (Amex)</td>
+  <td>no date inferred for Schwab</td>
+  <td>Ask Schwab for its Truth-in-Savings disclosure date.</td>
+  <td><a href="https://www.schwab.com/savings" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F15">
+  <td><span class="sev sev-low">Low</span><span class="cell-sub">F15</span></td>
+  <td><strong>Marcus maximum balance limit not extracted</strong><span class="cell-sub">Marcus states &#x27;Maximum balance limits apply&#x27; and links to its FAQ; the numeric limit was not extracted, so no ceiling is shown in the tables.</span></td>
+  <td>blank</td>
+  <td>not estimated</td>
+  <td>Read Marcus&#x27; maximum balance FAQ.</td>
+  <td><a href="https://www.marcus.com/us/en/faqs#maxlimits" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F16">
+  <td><span class="sev sev-low">Low</span><span class="cell-sub">F16</span></td>
+  <td><strong>PNC, Fifth Third, Citizens and KeyBank: FDIC verified, savings rate not verified</strong><span class="cell-sub">PNC, Fifth Third and Citizens FDIC records were confirmed through the FDIC API. Their savings rates / rate tables were not readable as static content in this session, so they have no row in the accounts or returns tables. KeyBank&#x27;s certificate number was not confirmed, so it is excluded entirely.</span></td>
+  <td>no rows</td>
+  <td>no rates invented</td>
+  <td>Open the individual bank rate pages with a ZIP entered.</td>
+  <td><a href="https://www.pnc.com/en/personal-banking/banking/savings.html" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F17">
+  <td><span class="sev sev-low">Low</span><span class="cell-sub">F17</span></td>
+  <td><strong>Truist app / security claims not verified</strong><span class="cell-sub">The Truist page captured was the savings disclosure page, which does not describe the mobile app or a security program. Those cells are blank in the Security &amp; App table.</span></td>
+  <td>blank</td>
+  <td>not inferred</td>
+  <td>Review truist.com mobile banking and security pages.</td>
+  <td><a href="https://www.truist.com/savings/truist-one-savings/disclosures-and-fees" target="_blank" rel="noopener">Official source</a></td>
+</tr><tr id="F18">
+  <td><span class="sev sev-low">Low</span><span class="cell-sub">F18</span></td>
+  <td><strong>Third-party rates appear on banks&#x27; own pages and are not used</strong><span class="cell-sub">Several official pages quote competitor or &#x27;national average&#x27; rates sourced from Curinos / third parties (for example, Marcus&#x27; comparison widget cites Chase at 0.02% and Bank of America at 0.04%). These numbers are second-hand even though they appear on a bank site, so this repo does not use them as verification for any bank.</span></td>
+  <td>primary statements only</td>
+  <td>competitor rates quoted on bank marketing pages</td>
+  <td>None; recorded for transparency.</td>
+  <td><a href="https://www.marcus.com/us/en/savings/high-yield-savings" target="_blank" rel="noopener">Official source</a></td>
+</tr></tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Patterns worth knowing about</h2>
+  <ul class="list">
+    <li><strong>The biggest banks hide rates behind a ZIP code.</strong> Chase, Citi, TD and Bank of America all
+        render rates client-side or per location. That is a marketing choice, not a data gap on this side — and
+        it is why those banks' APY cells are blank while their fees and rules are fully transcribed.</li>
+    <li><strong>Marketing pages contain template and arithmetic defects.</strong> Bank of America printed
+        "$XXXX" as a fee, Capital One printed "NaN APY", and Synchrony printed both 3.55% and 2.85% as its own
+        APY. None of those defects were smoothed over.</li>
+    <li><strong>Second-hand numbers on first-party pages are still second-hand.</strong> Bank comparison widgets
+        quote competitor rates sourced from Curinos. They are not treated as verification for anything here.</li>
+  </ul>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Captured 2026-10-22 (UTC).</strong> Projected opening date 2026-10-23. Every rate, fee and rule
+    on this site is transcribed from the official page linked in the same row. Blank means the value could
+    not be confirmed on an official page — see <a href="flagged.html">Flagged for Review</a>.
+    Nothing here is financial advice.</p>
+  </div>
+</footer>
+</body>
+</html>

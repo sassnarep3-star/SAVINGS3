@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · Savings Account Research</title>
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> Savings Research</a>
+    <nav class="nav"><a href="index.html">Dashboard</a><a href="accounts.html">Accounts</a><a href="returns.html">Returns</a><a href="fdic-insurance.html">FDIC Coverage</a><a href="bonuses.html">Bonuses</a><a href="rates-competitiveness.html">Rate Check</a><a href="security-apps.html">App & Security</a><a href="flagged.html">Flagged</a><a href="methodology.html">Method</a><a href="sources.html" class="active">Sources</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="page-head">
+    <h1>Sources</h1>
+    <p class="sub">The official pages behind every number on this site, grouped by publisher.</p>
+  </div>
+  
+<p class="lede">Every link below was opened during the 2026-10-22 session. Government sources first, then each
+bank's own pages. Third-party rate aggregators are deliberately absent.</p>
+
+<section class="section">
+  <h2>FDIC (official U.S. government sources)</h2>
+  <div class="table-scroll">
+  <table class="table">
+    <thead><tr><th>Source</th><th>Used for</th></tr></thead>
+    <tbody><tr><td><a href='https://www.fdic.gov/resources/deposit-insurance/' target='_blank' rel='noopener'>FDIC - Deposit Insurance overview</a></td><td>What FDIC insurance covers; $250,000 automatic coverage; products that are not covered</td></tr><tr><td><a href='https://www.fdic.gov/resources/deposit-insurance/faq' target='_blank' rel='noopener'>FDIC - Deposit Insurance FAQs</a></td><td>$250,000 per depositor, per bank, per ownership category; automatic coverage; BankFind</td></tr><tr><td><a href='https://www.fdic.gov/resources/deposit-insurance/financial-products-insured' target='_blank' rel='noopener'>FDIC - Are My Deposit Accounts Insured by the FDIC?</a></td><td>Ownership categories, joint-account rule, trust-account formula (owners x beneficiaries x $250,000, capped at $1,250,000 per owner)</td></tr><tr><td><a href='https://www.fdic.gov/national-rates-and-rate-caps' target='_blank' rel='noopener'>FDIC - National Rates and Rate Caps, October 2026 (revised October 19, 2026)</a></td><td>National savings rate 0.38% - the benchmark for rate competitiveness</td></tr><tr><td><a href='https://banks.data.fdic.gov/bankfind-suite/bankfind' target='_blank' rel='noopener'>FDIC - BankFind Suite</a></td><td>Confirming FDIC insurance and certificate numbers</td></tr><tr><td><a href='https://edie.fdic.gov/' target='_blank' rel='noopener'>FDIC - Electronic Deposit Insurance Estimator (EDIE)</a></td><td>Calculating coverage for a specific ownership structure</td></tr><tr><td><a href='https://www.fdic.gov/bank-failures/when-bank-fails-facts-depositors-creditors-and-borrowers' target='_blank' rel='noopener'>FDIC - When a Bank Fails</a></td><td>What happens to insured deposits in a failure</td></tr></tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section">
+  <h2>FDIC public API (machine-readable institution records used for certificate numbers)</h2>
+  <div class="table-scroll">
+  <table class="table">
+    <thead><tr><th>Source</th><th>Used for</th></tr></thead>
+    <tbody><tr><td><a href='https://api.fdic.gov/banks/institutions?filters=CERT:628&amp;fields=NAME,CERT,ACTIVE,CITY,STALP,ASSET,WEBADDR&amp;format=json' target='_blank' rel='noopener'>FDIC API - institution records (query by CERT)</a></td><td>Chase (628), Bank of America (3510), Wells Fargo (3511), Citibank (7213), PNC (6384), Truist (9846), TD Bank (18409), Fifth Third (6672), Citizens (57957), Capital One (4297), Ally (57803), Goldman Sachs Bank USA / Marcus (33124), Synchrony (27314), SoFi Bank (26881), Charles Schwab Bank (57450), Discover (5649, inactive)</td></tr><tr><td><a href='https://api.fdic.gov/banks/institutions' target='_blank' rel='noopener'>FDIC API documentation index (banks/institutions endpoint)</a></td><td>Confirming the endpoint used for the records above</td></tr></tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Bank rate and account pages (official, used for every rate row)</h2>
+  <div class="table-scroll">
+  <table class="table">
+    <thead><tr><th>Source</th><th>Used for</th></tr></thead>
+    <tbody><tr><td><a href='https://www.synchrony.com/banking/products/high-yield-savings' target='_blank' rel='noopener'>Synchrony - High Yield Savings</a></td><td>3.55% APY; no minimums; no monthly fees; 24/7 monitoring; app ratings</td></tr><tr><td><a href='https://www.marcus.com/us/en/savings/high-yield-savings' target='_blank' rel='noopener'>Marcus by Goldman Sachs - High Yield Online Savings</a></td><td>3.50% APY as of October 21, 2026; no fees/minimums; same-day transfers; referral promo</td></tr><tr><td><a href='https://www.marcus.com/us/en/savings/referrals#termsandconditions' target='_blank' rel='noopener'>Marcus - referral terms and conditions</a></td><td>+1.00% APY for 3 months; 3.75% combined-APY example</td></tr><tr><td><a href='https://www.sofi.com/banking/high-yield-savings-account/' target='_blank' rel='noopener'>SoFi - High Yield Savings Account</a></td><td>3.30% APY as of 10/20/26; +1.10% boost to 4.40%; $50/$400 bonus; $0 fees; FDIC network claim</td></tr><tr><td><a href='https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/' target='_blank' rel='noopener'>American Express - High Yield Savings</a></td><td>3.20% APY; no minimum deposit; no fees; daily compounding; App</td></tr><tr><td><a href='https://www.americanexpress.com/en-us/banking/online-savings/account/' target='_blank' rel='noopener'>American Express - Online Savings</a></td><td>Member FDIC $250,000; 24/7 support; funding steps</td></tr><tr><td><a href='https://www.capitalone.com/bank/open-an-account/' target='_blank' rel='noopener'>Capital One - Compare Checking &amp; Savings (rate listing)</a></td><td>360 Performance Savings 3.20% APY; 360 CDs up to 4.40%</td></tr><tr><td><a href='https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/' target='_blank' rel='noopener'>Capital One - 360 Performance Savings product page</a></td><td>No fees/minimums; FDIC; app; withdrawal rules; open in ~5 minutes; 60 days to fund</td></tr><tr><td><a href='https://www.capitalone.com/bank/disclosures/savings-accounts/online-performance-savings-account/' target='_blank' rel='noopener'>Capital One - 360 Performance Savings disclosures</a></td><td>Terms and conditions</td></tr><tr><td><a href='https://www.ally.com/bank/savings-account-rates/' target='_blank' rel='noopener'>Ally Bank - Compare Savings (rate table)</a></td><td>3.1% APY as of 10/21/26; 10-withdrawal limit; daily compounding; FDIC</td></tr><tr><td><a href='https://www.ally.com/bank/online-savings-account/' target='_blank' rel='noopener'>Ally Bank - Savings Account product page</a></td><td>Buckets/boosters; security guarantee; no fees or minimums</td></tr><tr><td><a href='https://www.ally.com/bank/fdic/' target='_blank' rel='noopener'>Ally Bank - FDIC</a></td><td>Ally&#x27;s FDIC disclosure</td></tr><tr><td><a href='https://www.usbank.com/bank-accounts/savings-accounts/bank-smartly-savings/savings-account-interest-rates.html' target='_blank' rel='noopener'>U.S. Bank - Savings account interest rates</a></td><td>0.05% standard; 1.00%/2.00%/3.50% relationship tiers; effective October 21, 2026</td></tr><tr><td><a href='https://www.usbank.com/bank-accounts/savings-accounts.html' target='_blank' rel='noopener'>U.S. Bank - Savings accounts</a></td><td>$25 minimum opening deposit; $5 monthly fee; FDIC; secure digital banking</td></tr><tr><td><a href='https://www.wellsfargo.com/savings-cds/rates/' target='_blank' rel='noopener'>Wells Fargo - Savings and CD interest rates</a></td><td>Platinum Savings 3.25% promotional APY for new customers with $25,000+; 0.01% standard; Way2Save 0.01%; $25 minimum; $12/$5 fees; 4-month CD 3.49%</td></tr><tr><td><a href='https://www.wellsfargo.com/savings-cds/platinum/' target='_blank' rel='noopener'>Wells Fargo - Platinum Savings</a></td><td>Product terms and fee waiver</td></tr><tr><td><a href='https://www.wellsfargo.com/savings-cds/' target='_blank' rel='noopener'>Wells Fargo - Savings accounts and CDs</a></td><td>Account lineup; minimum deposits; FDIC statement; opening requirements</td></tr><tr><td><a href='https://media.bac-assets.com/DigitalDeposit_NY_NY_Tri_State_Area.pdf' target='_blank' rel='noopener'>Bank of America - Deposit Interest Rates &amp; APYs, New York Tri-State Area (PDF)</a></td><td>Advantage Savings 0.04% APY all tiers, effective October 21, 2026; 7-month Featured CD 3.75%/4.00% APY; $250,000 online opening limit</td></tr><tr><td><a href='https://www.bankofamerica.com/deposits/bank-account-interest-rates/' target='_blank' rel='noopener'>Bank of America - Bank account interest rates</a></td><td>Gateway to the state/Tri-State rate sheets</td></tr><tr><td><a href='https://www.bankofamerica.com/deposits/savings/savings-accounts/' target='_blank' rel='noopener'>Bank of America - Advantage Savings</a></td><td>Product features; FDIC banner; fee section (rendered as placeholders - flagged)</td></tr><tr><td><a href='https://www.chase.com/personal/savings/savings-account' target='_blank' rel='noopener'>Chase - Chase Savings</a></td><td>$5 fee and all waivers; no minimum balance to open; monthly compounding; FDIC; Chase Mobile</td></tr><tr><td><a href='https://www.chase.com/personal/savings/savings-account/interest-rates' target='_blank' rel='noopener'>Chase - Chase Savings interest rates</a></td><td>Confirms rates are ZIP-gated (APY left blank)</td></tr><tr><td><a href='https://account.chase.com/consumer/banking/savingsoffer' target='_blank' rel='noopener'>Chase - Savings offer</a></td><td>$100 for $5,000-$9,999; $200 for $10,000+; 30-day deposit, 90-day hold; expires 01/27/2027</td></tr><tr><td><a href='https://www.citi.com/banking/savings-account' target='_blank' rel='noopener'>Citi - Savings Account</a></td><td>Product features; $500 average monthly balance fee waiver; relationship tiers; APY placeholder (flagged)</td></tr><tr><td><a href='https://www.citi.com/banking/compare-bank-accounts' target='_blank' rel='noopener'>Citi - Compare relationship tiers</a></td><td>APY accuracy date footnote (10/21/2026)</td></tr><tr><td><a href='https://www.td.com/us/en/personal-banking/savings-accounts' target='_blank' rel='noopener'>TD Bank - Savings accounts</a></td><td>$0 minimum opening; $5/$15 fees and waivers; ATM terms; FDIC-insured savings</td></tr><tr><td><a href='https://www.td.com/us/en/personal-banking/savings-accounts/rates' target='_blank' rel='noopener'>TD Bank - Savings rates</a></td><td>Location-gated tables; APY accuracy date footnote</td></tr><tr><td><a href='https://www.td.com/content/dam/tdb/document/pdf/personal-banking/simple-savings-en.pdf' target='_blank' rel='noopener'>TD Bank - Simple Savings account guide (PDF)</a></td><td>Account terms</td></tr><tr><td><a href='https://www.td.com/content/dam/tdb/document/pdf/personal-banking/signature-savings-account-guide-acc-en.pdf' target='_blank' rel='noopener'>TD Bank - Signature Savings account guide (PDF)</a></td><td>Account terms</td></tr><tr><td><a href='https://www.truist.com/savings/truist-one-savings/disclosures-and-fees' target='_blank' rel='noopener'>Truist - Truist One Savings disclosure and fees</a></td><td>0.01% APY as of 9/28/2026; $50 minimum; $5 fee; $5 withdrawal-limit fee; ATM fees</td></tr><tr><td><a href='https://www.truist.com/content/dam/truist-bank/us/en/documents/disclosures/personal/aog-truist-one-savings.pdf' target='_blank' rel='noopener'>Truist - Truist One Savings account overview (PDF)</a></td><td>Compounding and account terms</td></tr><tr><td><a href='https://www.schwab.com/savings' target='_blank' rel='noopener'>Charles Schwab - Investor Savings</a></td><td>0.15% APY; no monthly fees; ATM rebates; FDIC $250,000; application process</td></tr><tr><td><a href='https://www.pnc.com/en/personal-banking/banking/savings.html' target='_blank' rel='noopener'>PNC - Savings</a></td><td>Product lineup and app badges (no readable rate; no row in tables)</td></tr><tr><td><a href='https://www.bankofamerica.com/salesservices/deposits/resources/personal-schedule-fees/' target='_blank' rel='noopener'>Bank of America - Personal Schedule of Fees (PDF, effective August 7, 2026)</a></td><td>Advantage Savings: $100 minimum to open, $8.00 monthly fee, six-month new-account waiver, $500 daily-balance waiver</td></tr><tr><td><a href='https://www.americanexpress.com/en-us/banking/online-savings/faq/information-protection/' target='_blank' rel='noopener'>American Express - how the savings site protects your information</a></td><td>Mandatory multi-factor authentication, 128-bit SSL, 5-minute auto-logout, and the APY accuracy date 10/21/2026</td></tr><tr><td><a href='https://www.ally.com/security/our-approach/' target='_blank' rel='noopener'>Ally Bank - security approach</a></td><td>MFA, TLS, automatic logout, monitoring, and the online/mobile security guarantee&#x27;s 60-day reporting condition</td></tr><tr><td><a href='https://www.marcus.com/us/en/online-banking' target='_blank' rel='noopener'>Marcus - online banking</a></td><td>Multi-factor authentication, SSL encryption, firewalls; daily compounding</td></tr><tr><td><a href='https://www.capitalone.com/digital/tools/mobile/' target='_blank' rel='noopener'>Capital One - mobile app</a></td><td>Two-step authentication, biometric sign-in, fraud and purchase alerts, card lock</td></tr><tr><td><a href='https://www.capitalone.com/help-center/discover-faqs/' target='_blank' rel='noopener'>Capital One - Discover transition FAQs</a></td><td>Merger closed May 18, 2025; joint FDIC insurance from November 18, 2025; some Discover CDs separately insured until maturity</td></tr></tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Certificates of deposit used only as fixed-rate context</h2>
+  <div class="table-scroll">
+  <table class="table">
+    <thead><tr><th>Source</th><th>Used for</th></tr></thead>
+    <tbody><tr><td><a href='https://media.bac-assets.com/DigitalDeposit_NY_NY_Tri_State_Area.pdf' target='_blank' rel='noopener'>Bank of America - 7-month Featured CD (in NY Tri-State rate sheet)</a></td><td>3.75% APY under $100,000; 4.00% APY at $100,000+; $1,000 minimum</td></tr><tr><td><a href='https://www.wellsfargo.com/savings-cds/rates/' target='_blank' rel='noopener'>Wells Fargo - 4-month Special Fixed Rate CD</a></td><td>3.49% APY standard; 3.75% relationship APY</td></tr><tr><td><a href='https://www.capitalone.com/bank/open-an-account/' target='_blank' rel='noopener'>Capital One - 360 CDs</a></td><td>Up to 4.40% APY, fixed</td></tr><tr><td><a href='https://www.americanexpress.com/en-us/banking/online-savings/account/' target='_blank' rel='noopener'>American Express - CDs</a></td><td>Up to 4.40% APY, terms up to five years</td></tr></tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Project references</h2>
+  <div class="table-scroll">
+  <table class="table">
+    <thead><tr><th>Source</th><th>Used for</th></tr></thead>
+    <tbody><tr><td><a href='https://github.com/sassnarep3-star/SAVINGS3' target='_blank' rel='noopener'>Repository — SAVINGS3</a></td><td>Source code, generated pages and data files</td></tr><tr><td><a href='https://github.com/sassnarep3-star/SAVINGS3/blob/main/COORDINATION.md' target='_blank' rel='noopener'>COORDINATION.md — task board and conflict log</a></td><td>Provenance of the two research passes and how they were reconciled</td></tr></tbody>
+  </table>
+  </div>
+</section>
+
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Captured 2026-10-22 (UTC).</strong> Projected opening date 2026-10-23. Every rate, fee and rule
+    on this site is transcribed from the official page linked in the same row. Blank means the value could
+    not be confirmed on an official page — see <a href="flagged.html">Flagged for Review</a>.
+    Nothing here is financial advice.</p>
+  </div>
+</footer>
+</body>
+</html>
