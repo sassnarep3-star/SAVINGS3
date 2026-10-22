@@ -1,9 +1,15 @@
 # SAVINGS3 — Savings Account Research
 
-A verified, source-linked study of the best FDIC-insured savings account for a large balance at a
-large national bank, published as a static dashboard on GitHub Pages.
+A verified, source-linked study of FDIC-insured savings accounts at large national banks, published as a
+static dashboard on GitHub Pages.
 
 **Live site:** https://sassnarep3-star.github.io/SAVINGS3/
+**Earlier snapshot from a parallel session:** https://sassnarep3-star.github.io/SAVINGS3/site/
+
+This repository was built by two independent sessions. The root dashboard is the full research pass
+(16 accounts, per-row sources, returns to $1.25M, FDIC coverage structures, 19 flagged items). The `site/`
+directory holds the earlier, shorter snapshot, preserved unchanged — see
+[COORDINATION.md](COORDINATION.md) for how the two were reconciled.
 
 ---
 
@@ -19,8 +25,8 @@ large national bank, published as a static dashboard on GitHub Pages.
 | Fully insured at one bank | **$1,250,000** (1 owner × 5 POD beneficiaries × $250,000) |
 | Interest on $1,250,000 for one year | **$44,375** at 3.55%, fully insured |
 
-On a $1.25M fully insured balance the difference between the best verified online rate and
-Bank of America's 0.04% is about **$43,875 a year**.
+On a $1.25M fully insured balance the difference between the best verified online rate and Bank of
+America's 0.04% is about **$43,875 a year**.
 
 ## What is in this repo
 
@@ -38,13 +44,18 @@ sources.html                  All official sources, grouped by publisher
 data/*.json                   The single source of truth: every fact with its source URL
 scripts/build_site.py         Regenerates all pages from data/
 scripts/verify_site.py        Fails the build on broken links, missing sources, or bad arithmetic
+site/                         Earlier snapshot from a parallel session (kept as published)
+scripts/build.py, check.py    That snapshot's generator and validator
+.github/workflows/pages.yml   CI validation on push / PR to main
 ```
 
-Nothing is hand-edited in the HTML. Change a number in `data/`, rebuild, and every page follows.
+The root HTML is generated, not hand-edited. Change a number in `data/`, rebuild, and every page follows.
 
 ```bash
-python3 scripts/build_site.py   # regenerate
-python3 scripts/verify_site.py  # gate: links, sources, arithmetic
+python3 scripts/build_site.py    # regenerate the dashboard
+python3 scripts/verify_site.py   # gate: links, sources, arithmetic
+python3 scripts/build.py         # regenerate the earlier snapshot in site/
+python3 scripts/check.py         # that snapshot's own validator
 ```
 
 ## Method
@@ -62,8 +73,8 @@ python3 scripts/verify_site.py  # gate: links, sources, arithmetic
 * **Blank beats wrong.** Chase, Citi and TD will not render a savings APY without a ZIP code or
   client-side script. Their APY cells are blank, their rows are kept for fees and rules, and each gap
   is published on the Flagged for Review page with a link.
-* **Arithmetic is stated.** Balance = deposit × (1 + APY)^years; interest = balance − deposit. APY
-  already includes compounding, so this reproduces a bank's own annual disclosure at a constant rate.
+* **Arithmetic is stated.** Balance = deposit × (1 + APY)^years; interest = balance − deposit. An APY
+  already reflects compounding, so this reproduces a bank's own annual disclosure at a constant rate.
   Every account is variable-rate except the CDs shown for context, so 3- and 5-year columns are
   models, not forecasts.
 
@@ -73,14 +84,18 @@ The headline irregularities, all published on `flagged.html` with sources:
 
 1. **Synchrony** prints both 3.55% and 2.85% APY on the same page (headline vs its own calculator).
 2. **Chase, Citi, TD** savings APYs could not be verified — gated by ZIP code or JavaScript.
-3. **Bank of America** rendered its fee as the literal placeholder `$XXXX`.
+3. **Bank of America** rendered its fee as the literal placeholder `$XXXX`; the real values ($100 to
+   open, $8 monthly, six-month waiver) were taken from its Personal Schedule of Fees, effective
+   2026-08-07.
 4. **Capital One** rendered its savings APY as `NaN APY`; the rate was taken from Capital One's own
    comparison and application pages instead.
 5. **American Express** and **U.S. Bank** FDIC certificate numbers were not retrieved from the FDIC API.
-6. **Discover Bank** shows `ACTIVE = 0`; Capital One counts Discover deposits with its own from
-   2025-05-18 onward, so the two brands are one $250,000 limit.
-7. **Wells Fargo** and **U.S. Bank** rate pages defaulted to non-New-York ZIP codes and print no
-   effective date (Wells Fargo only).
+6. **Discover Bank** shows `ACTIVE = 0`. Capital One says Discover merged on 2025-05-18 and joint
+   FDIC insurance began 2025-11-18 — but its own product page says "on or after May 18, 2025", so the
+   two Capital One pages disagree. Both readings are recorded.
+7. **Wells Fargo** and **U.S. Bank** rate pages defaulted to non-New-York ZIP codes; Wells Fargo prints
+   no effective date.
+8. **SoFi's "$3M FDIC"** is a sweep-network program, not a single-bank limit.
 
 ## Licence / disclaimer
 
