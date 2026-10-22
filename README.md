@@ -97,6 +97,19 @@ The headline irregularities, all published on `flagged.html` with sources:
    no effective date.
 8. **SoFi's "$3M FDIC"** is a sweep-network program, not a single-bank limit.
 
+## Third pass highlights (`docs/`, verified 2026-10-22)
+
+* League table of every verified APY across 13 FDIC charters, with CONDITIONAL labels where a headline
+  rate needs a balance, linked product, new-customer status, or eligible ZIP (U.S. Bank Smartly 3.50%,
+  U.S. Bank Elite 3.40%, Wells Platinum 3.25%, PNC HY 3.15%).
+* Returns by deposit size ($10k/$50k/$100k/$250k) at 6 months–5 years from 2026-10-22, an interactive
+  calculator, and the FDIC-safe maximum deposit table (e.g., $241,545.89 for 1 year at 3.50% — depositing
+  the full $250,000 lets interest overflow single-category coverage).
+* CD rates by term with maturity payouts and early-withdrawal penalties; fee break-even math showing when
+  branch-account fees erase 0.01% interest; bonus simple-% comparisons with deadlines.
+* Unverified values (Citi standard APY, TD Signature tiers, Citizens Access APY, PNC Standard/Premiere)
+  left blank and published on `docs/flagged.html` with manual-verification steps.
+
 ## Licence / disclaimer
 
 Research notes, not financial advice. Rates change without notice; re-verify before opening an

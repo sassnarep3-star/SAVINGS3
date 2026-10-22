@@ -86,3 +86,53 @@ Session: arena-d7395cfa (integration). All work uses the Arena-required branch `
   this sandbox's network allowlist.
 * No build, check or deploy failure occurred. No unresolved item blocks publication: all 19 flagged items are
   published on `flagged.html` with sources.
+
+---
+
+## Third pass (session arena-dbe2ef46) — integration record
+
+This session started from commit `66f2767` (README only), created its own claim board, and worked end-to-end on
+its Arena-fixed branch `arena/dbe2ef46-savings3` without seeing `main` move. By the time PR #5 was opened,
+`main` already contained the first pass (`site/`, PRs #1–#2) and the second pass (root dashboard + `data/`,
+PRs #3–#4), with GitHub Pages already live in **legacy mode (source `main` / root)**.
+
+### Conflict log (third pass)
+
+| When (UTC) | Session | Event |
+|---|---|---|
+| 2026-10-22 | `arena-dbe2ef46` | `gh pr merge 5` rejected: "not mergeable". Fetched `origin/main` (`4c96a94`): add/add conflicts on `.github/workflows/pages.yml` and `COORDINATION.md`, content conflict on `README.md`. No file-scope overlap for `docs/**`. |
+| 2026-10-22 | `arena-dbe2ef46` | Resolved without discarding prior work: kept `main`'s `pages.yml` (validation CI + legacy Pages model unchanged; this session's workflow-deploy version withdrawn — switching build_type via API returned 403 "Resource not accessible by integration" for this session too), kept `main`'s `README.md`/`COORDINATION.md` as the base text and appended third-pass records, and published the third pass intact under `docs/` (served at `/SAVINGS3/docs/` by the existing legacy publishing). Root generated HTML and `site/` untouched, so the `pages.yml` generated-page freshness check still passes. |
+
+### Task board (third pass, all done 2026-10-22)
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| 1 | COORDINATION claim + repo review | done | dbe2ef46 | `COORDINATION.md` (merged above) |
+| 2 | Scope + FDIC limit + benchmarks (Fed ranking, FDIC averages) | done | dbe2ef46 | `docs/research-notes.md` |
+| 3–6 | Traditional / HYSA / money-market + CD / bonus + opening-rule research, official pages only | done (needs-review items F-01–F-20 in `docs/flagged.html`) | dbe2ef46 | `docs/research-notes.md` |
+| 7 | ROI tables $10k/$50k/$100k/$250k × 6mo/1/2/3/5yr from 2026-10-22 (Python; verified APYs only) | done | dbe2ef46 | `docs/returns.html`, `docs/cds.html` |
+| 8 | Static site: dashboard + category pages + Returns/FDIC planner + Bonuses + Opening/Security + Methodology + Flagged | done (10 pages; local link/anchor check clean) | dbe2ef46 | `docs/*.html`, `docs/assets/*` |
+| 9 | Integration: reconcile with passes 1–2, merge PR #5, confirm Pages | done (this section) | dbe2ef46 | merge only |
+
+Branch-naming deviation: the brief's `session-<id>/<task>` pattern is not available in this environment; work
+used the Arena-fixed branch `arena/dbe2ef46-savings3` (name only).
+
+### Cross-pass agreement check (2026-10-22)
+
+* Overlapping verified values agree exactly across all three passes: Marcus 3.50%, Capital One 3.20%,
+  Amex 3.20%, Ally 3.10%, Wells Platinum new-customer 3.25%, BofA Advantage 0.04% ($100 open / $8 fee),
+  FDIC savings average 0.38%. Nothing was changed to force agreement.
+* The third pass additionally publishes Chase/TD-Simple savings APYs (0.01–0.02% / 0.02%) from official
+  rate-sheet PDFs dated Oct 16/21, 2026, labeled market-specific/CONDITIONAL, where earlier passes left them
+  blank — an evidence-depth difference, not a contradiction. Citi standard APY is blank in every pass.
+* Scope differs by design: pass 2 includes Synchrony/SoFi/Schwab/Fifth Third; pass 3 covers the 13 FDIC
+  charters listed in `docs/methodology.html` and defers the rest (its F-16). Each pass states its scope.
+* Third-pass audit trail: `docs/research-notes.md` (every value → official URL → source date, verified
+  2026-10-22). Flagged register: `docs/flagged.html` (F-01–F-20), non-blocking per the brief.
+
+### Publication record (third pass)
+
+* PR #5 — https://github.com/sassnarep3-star/SAVINGS3/pull/5 — merge result and Pages confirmation recorded
+  in the follow-up commit on `arena/dbe2ef46-savings3` / PR timeline after merge. Pages remains legacy
+  (`main` / root); the third pass is live at https://sassnarep3-star.github.io/SAVINGS3/docs/ once `main`
+  rebuilds, alongside `/` (second pass) and `/site/` (first pass).
