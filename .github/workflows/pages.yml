@@ -24,7 +24,9 @@ jobs:
       - run: python scripts/verify_site.py
       - name: Fail if generated pages are out of date
         run: |
-          if ! git diff --quiet -- '*.html'; then
+          if ! git diff --quiet -- index.html accounts.html returns.html fdic-insurance.html \
+               bonuses.html rates-competitiveness.html security-apps.html flagged.html \
+               methodology.html sources.html; then
             echo "Generated HTML is stale. Run python3 scripts/build_site.py and commit the result."
             git diff --stat
             exit 1
