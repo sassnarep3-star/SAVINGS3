@@ -1,0 +1,185 @@
+{
+  "capture_date": "2026-10-22",
+  "items": [
+    {
+      "id": "F01",
+      "severity": "High",
+      "topic": "Synchrony Bank: two different APYs on the same official page",
+      "detail": "Synchrony's High Yield Savings page prints 3.55% APY in the headline and again at the foot of the page, but its own savings calculator widget states 'Our HYS APY 2.85%'. This repo uses 3.55% because it is the headline and the repeated footer value. The conflict is unresolved by Synchrony's own page.",
+      "value_used": "3.55% APY",
+      "value_not_used": "2.85% APY",
+      "source": "https://www.synchrony.com/banking/products/high-yield-savings",
+      "action": "Confirm the live rate in the Synchrony app or by phone before opening."
+    },
+    {
+      "id": "F02",
+      "severity": "High",
+      "topic": "Chase savings APY could not be verified",
+      "detail": "Chase's official rate page refuses to render rates without a 5-digit ZIP code ('In order to see rates table, please provide valid 5-digit zip code'). No official Chase page captured in this session printed a savings APY.",
+      "value_used": "blank",
+      "value_not_used": "~0.01%-0.02% APY (third-party trackers, not used)",
+      "source": "https://www.chase.com/personal/savings/savings-account/interest-rates",
+      "action": "Enter the New York ZIP at chase.com to see the rate Chase will actually pay."
+    },
+    {
+      "id": "F03",
+      "severity": "High",
+      "topic": "Citi savings APY could not be verified",
+      "detail": "The official Citi savings page injects the Accelerate Savings APY through a template placeholder (':BLUE_AccSavings_Rate%') that rendered no value. Citi's footnote only states that the APY is accurate as of 10/21/2026.",
+      "value_used": "blank",
+      "value_not_used": "3.00% APY (third-party trackers, not used)",
+      "source": "https://www.citi.com/banking/savings-account",
+      "action": "Check the rate inside the Citi app or with a Citi banker."
+    },
+    {
+      "id": "F04",
+      "severity": "High",
+      "topic": "TD Bank savings APYs could not be verified",
+      "detail": "TD's Simple and Signature Savings rate tables render empty percentage cells until a location is selected. TD does print that 'APY is accurate as of 10/21/2026', but no number appears.",
+      "value_used": "blank",
+      "value_not_used": "not estimated",
+      "source": "https://www.td.com/us/en/personal-banking/savings-accounts/rates",
+      "action": "Select a New York location on TD's rate page."
+    },
+    {
+      "id": "F05",
+      "severity": "Medium",
+      "topic": "Bank of America product page rendered fee placeholders",
+      "detail": "Bank of America's Advantage Savings page displayed '$XXXX or $0' and '$XXXX' for the monthly maintenance fee and the fee-waiver balance threshold, i.e. an unfilled template. The fee amount and the minimum opening deposit were therefore left blank in this repo.",
+      "value_used": "blank",
+      "value_not_used": "third-party figures ($8 fee, $100 minimum) - not used",
+      "source": "https://www.bankofamerica.com/deposits/savings/savings-accounts/",
+      "action": "Ask Bank of America for the Personal Schedule of Fees for the New York market."
+    },
+    {
+      "id": "F06",
+      "severity": "Medium",
+      "topic": "American Express National Bank FDIC certificate not retrieved",
+      "detail": "Three FDIC API queries (exact name, prefix wildcard, and web address) returned no institution record for American Express National Bank. American Express states 'Member FDIC' on its own savings pages, so coverage is very likely, but the certificate number is unconfirmed here.",
+      "value_used": "blank certificate number",
+      "value_not_used": "not guessed",
+      "source": "https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=American%20Express%20National%20Bank",
+      "action": "Search FDIC BankFind manually; the record also appears on Amex's account agreement."
+    },
+    {
+      "id": "F07",
+      "severity": "Medium",
+      "topic": "U.S. Bank FDIC certificate not retrieved",
+      "detail": "The FDIC certificate number for U.S. Bank, National Association was not pulled through the FDIC API in this session, so the cell is blank even though U.S. Bank advertises FDIC insurance on its savings page.",
+      "value_used": "blank certificate number",
+      "value_not_used": "not guessed",
+      "source": "https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=U.S.%20Bank",
+      "action": "Confirm the certificate number in BankFind."
+    },
+    {
+      "id": "F08",
+      "severity": "High",
+      "topic": "Discover Bank is shown as inactive by the FDIC",
+      "detail": "The FDIC API record for Discover Bank (certificate 5649, Greenwood, DE) returns ACTIVE = 0. Capital One's official page states that Capital One or Discover Bank deposit accounts opened on or after May 18, 2025 are immediately counted with other Capital One deposit accounts for FDIC coverage. Discover is therefore excluded from the returns tables rather than treated as a separate $250,000 stack.",
+      "value_used": "excluded from returns tables",
+      "value_not_used": "any Discover savings APY",
+      "source": "https://api.fdic.gov/banks/institutions?filters=CERT:5649&fields=NAME,CERT,ACTIVE,CITY,STALP,ASSET&format=json",
+      "action": "None for a new account; do not count Capital One and Discover as two separate $250,000 banks."
+    },
+    {
+      "id": "F09",
+      "severity": "Medium",
+      "topic": "Wells Fargo rate page defaulted to a California ZIP and prints no effective date",
+      "detail": "The captured Wells Fargo rate table was rendered for 'CA, 94105' (the page's default location), and none of the savings tables carry an effective date. A New York opening could show different numbers.",
+      "value_used": "3.25% APY promotional tier / 0.01% standard, as displayed",
+      "value_not_used": "no alternative substituted",
+      "source": "https://www.wellsfargo.com/savings-cds/rates/",
+      "action": "Set the ZIP to a New York ZIP before relying on the rate."
+    },
+    {
+      "id": "F10",
+      "severity": "Medium",
+      "topic": "U.S. Bank rates were displayed for ZIP 55402",
+      "detail": "U.S. Bank's rate sheet rendered for ZIP code 55402 (Minneapolis) by default and states that 'APYs may vary by location'. The published tier structure is used here as displayed.",
+      "value_used": "0.05% standard; 1.00% / 2.00% / 3.50% relationship tiers",
+      "value_not_used": "no alternative substituted",
+      "source": "https://www.usbank.com/bank-accounts/savings-accounts/bank-smartly-savings/savings-account-interest-rates.html",
+      "action": "Edit the ZIP on the U.S. Bank rate page to a New York ZIP."
+    },
+    {
+      "id": "F11",
+      "severity": "Low",
+      "topic": "Capital One product page rendered 'NaN APY'",
+      "detail": "The 360 Performance Savings page displayed 'NaN APY' (a JavaScript numeric error) instead of a percentage. The 3.20% APY was taken from Capital One's own account-comparison page and application page, both of which print 3.20% APY effective 10/21/2026.",
+      "value_used": "3.20% APY (from capitalone.com/bank/open-an-account/)",
+      "value_not_used": "no alternative substituted",
+      "source": "https://www.capitalone.com/bank/open-an-account/",
+      "action": "None; the alternate official page is authoritative."
+    },
+    {
+      "id": "F12",
+      "severity": "Low",
+      "topic": "American Express and Schwab print no effective date next to the APY",
+      "detail": "Both pages state the APY without saying when it took effect, so the 'APY as of' column is blank and the capture date (2026-10-22) is recorded instead.",
+      "value_used": "3.20% APY (Amex), 0.15% APY (Schwab)",
+      "value_not_used": "no date inferred",
+      "source": "https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/",
+      "action": "Ask the bank for its Truth-in-Savings disclosure date."
+    },
+    {
+      "id": "F13",
+      "severity": "Medium",
+      "topic": "SoFi's advertised $3M FDIC coverage is a sweep program, not a single-bank limit",
+      "detail": "SoFi advertises FDIC insurance 'up to $3M through a network of participating banks'. A single FDIC-insured bank covers $250,000 per depositor per ownership category. Network programs depend on partner banks and program terms.",
+      "value_used": "single-bank $250,000 used in the coverage model",
+      "value_not_used": "$3M used as a single-bank limit",
+      "source": "https://www.sofi.com/banking/high-yield-savings-account/",
+      "action": "Read the SoFi program terms before depositing more than $250,000 at SoFi."
+    },
+    {
+      "id": "F14",
+      "severity": "Medium",
+      "topic": "SoFi bonus tiers not fully extracted",
+      "detail": "SoFi advertises a '$50 or $400' cash bonus with eligible direct deposit of $1,000 or more, but the exact qualifying threshold for the $400 tier is in terms that were not fully captured.",
+      "value_used": "\"$50 or $400\" as stated",
+      "value_not_used": "no threshold guessed",
+      "source": "https://www.sofi.com/banking/high-yield-savings-account/",
+      "action": "Read SoFi's bonus terms before applying."
+    },
+    {
+      "id": "F15",
+      "severity": "Low",
+      "topic": "Marcus maximum balance limit not extracted",
+      "detail": "Marcus states 'Maximum balance limits apply' and links to its FAQ; the numeric limit was not extracted, so no ceiling is shown in the tables.",
+      "value_used": "blank",
+      "value_not_used": "not estimated",
+      "source": "https://www.marcus.com/us/en/faqs#maxlimits",
+      "action": "Read Marcus' maximum balance FAQ."
+    },
+    {
+      "id": "F16",
+      "severity": "Low",
+      "topic": "PNC, Fifth Third, Citizens and KeyBank: FDIC verified, savings rate not verified",
+      "detail": "PNC, Fifth Third and Citizens FDIC records were confirmed through the FDIC API. Their savings rates / rate tables were not readable as static content in this session, so they have no row in the accounts or returns tables. KeyBank's certificate number was not confirmed, so it is excluded entirely.",
+      "value_used": "no rows",
+      "value_not_used": "no rates invented",
+      "source": "https://www.pnc.com/en/personal-banking/banking/savings.html",
+      "action": "Open the individual bank rate pages with a ZIP entered."
+    },
+    {
+      "id": "F17",
+      "severity": "Low",
+      "topic": "Truist app / security claims not verified",
+      "detail": "The Truist page captured was the savings disclosure page, which does not describe the mobile app or a security program. Those cells are blank in the Security & App table.",
+      "value_used": "blank",
+      "value_not_used": "not inferred",
+      "source": "https://www.truist.com/savings/truist-one-savings/disclosures-and-fees",
+      "action": "Review truist.com mobile banking and security pages."
+    },
+    {
+      "id": "F18",
+      "severity": "Low",
+      "topic": "Third-party rates appear on banks' own pages and are not used",
+      "detail": "Several official pages quote competitor or 'national average' rates sourced from Curinos / third parties (for example, Marcus' comparison widget cites Chase at 0.02% and Bank of America at 0.04%). These numbers are second-hand even though they appear on a bank site, so this repo does not use them as verification for any bank.",
+      "value_used": "primary statements only",
+      "value_not_used": "competitor rates quoted on bank marketing pages",
+      "source": "https://www.marcus.com/us/en/savings/high-yield-savings",
+      "action": "None; recorded for transparency."
+    }
+  ]
+}

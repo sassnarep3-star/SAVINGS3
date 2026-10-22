@@ -1,0 +1,497 @@
+{
+  "capture_date": "2026-10-22",
+  "rows": [
+    {
+      "id": "synchrony-hys",
+      "bank_id": "synchrony",
+      "product": "High Yield Savings",
+      "apy": 3.55,
+      "apy_as_of": null,
+      "apy_as_of_text": "No effective date printed on the page. Page title says \"October 2026 Rates\"; captured 2026-10-22.",
+      "rate_type": "Variable",
+      "compounding": "Not stated on captured page",
+      "min_open": 0,
+      "min_open_text": "No minimum deposit",
+      "min_to_earn_text": "No minimum balance",
+      "monthly_fee": 0,
+      "fee_text": "No monthly fees",
+      "fee_waiver": "Not applicable (no monthly fee)",
+      "withdrawal_rule": "Not stated on captured page",
+      "atm": "ATM access; $5 domestic ATM fee reimbursement per month is reported by third parties but was not verified on an official Synchrony page in this session",
+      "tiers": [{"min": 0, "apy": 3.55, "label": "All balances"}],
+      "sources": [
+        {"label": "Synchrony Bank - High Yield Savings (official)", "url": "https://www.synchrony.com/banking/products/high-yield-savings"}
+      ],
+      "verified": true,
+      "flags": [
+        "Synchrony's own page displays both 3.55% APY (headline and footer) and 2.85% APY (inside its savings calculator widget). The 3.55% figure is used here because it appears in the page headline and repeats at the foot of the page; the 2.85% conflict is logged on the Flagged for Review page."
+      ],
+      "promos": []
+    },
+    {
+      "id": "marcus-osa",
+      "bank_id": "marcus",
+      "product": "Marcus Online Savings Account",
+      "apy": 3.50,
+      "apy_as_of": "2026-10-21",
+      "apy_as_of_text": "\"Annual percentage yield as of October 21, 2026\"",
+      "rate_type": "Variable",
+      "compounding": "Not stated on captured page",
+      "min_open": 0,
+      "min_open_text": "No minimum deposit",
+      "min_to_earn_text": "No minimum balance",
+      "monthly_fee": 0,
+      "fee_text": "No fees",
+      "fee_waiver": "Not applicable (no fees)",
+      "withdrawal_rule": "Same-day transfers of $100,000 or less to/from other banks when requested by 12 pm ET on a business day",
+      "atm": "No ATM card on the savings account (not stated otherwise on captured page)",
+      "tiers": [{"min": 0, "apy": 3.50, "label": "All balances"}],
+      "sources": [
+        {"label": "Marcus by Goldman Sachs - High Yield Online Savings (official)", "url": "https://www.marcus.com/us/en/savings/high-yield-savings"},
+        {"label": "Marcus referral terms (promotional +1.00% APY)", "url": "https://www.marcus.com/us/en/savings/referrals#termsandconditions"}
+      ],
+      "verified": true,
+      "flags": [
+        "Marcus states maximum balance limits apply and links to its FAQ; the numeric limit was not extracted in this session."
+      ],
+      "promos": [
+        {
+          "title": "Referral: +1.00% APY for 3 months",
+          "detail": "Marcus states a 3-month promotional APY increase of 1.00% on top of the stated Online Savings APY. Marcus' own example: with one referral in a year and an unchanged standard APY, the account would earn a combined APY of 3.75%.",
+          "source": "https://www.marcus.com/us/en/savings/referrals#termsandconditions"
+        }
+      ]
+    },
+    {
+      "id": "sofi-savings",
+      "bank_id": "sofi",
+      "product": "SoFi Savings (opened with SoFi Checking)",
+      "apy": 3.30,
+      "apy_as_of": "2026-10-20",
+      "apy_as_of_text": "\"3.30% as of 10/20/26\"",
+      "rate_type": "Variable",
+      "compounding": "Not stated on captured page",
+      "min_open": 0,
+      "min_open_text": "$0 minimum deposit to open",
+      "min_to_earn_text": "No minimum balance",
+      "monthly_fee": 0,
+      "fee_text": "No account fees, no overdraft fees, no minimum balance fees",
+      "fee_waiver": "Not applicable (no fees)",
+      "withdrawal_rule": "\"No limit\" on withdrawals per SoFi's comparison table",
+      "atm": "ATM access via SoFi debit card (not itemised on captured page)",
+      "tiers": [{"min": 0, "apy": 3.30, "label": "All balances, standard"}],
+      "sources": [
+        {"label": "SoFi - High Yield Savings Account (official)", "url": "https://www.sofi.com/banking/high-yield-savings-account/"}
+      ],
+      "verified": true,
+      "flags": [
+        "SoFi automatically opens a SoFi Checking account when a SoFi Savings account is opened (stated on the official page).",
+        "SoFi advertises FDIC insurance up to $3M 'through a network of participating banks'. That is program-level coverage obtained by sweeping deposits to partner banks, not a single-bank $250,000 limit. Confirm the current program terms before relying on it."
+      ],
+      "promos": [
+        {
+          "title": "+1.10% APY boost (up to 6 months) with eligible direct deposit",
+          "detail": "Up to 4.40% APY = 3.30% base + 1.10% boost, for up to six months, if the account is opened by 12/31/27 and eligible direct deposit is set up within 60 days and maintained. The boost stays on top of the savings rate if the variable rate changes.",
+          "source": "https://www.sofi.com/banking/high-yield-savings-account/"
+        },
+        {
+          "title": "$50 or $400 cash bonus with eligible direct deposit",
+          "detail": "Open the account and set up an eligible direct deposit of $1,000 or more. Two tiers ($50 or $400) are advertised; the exact threshold for the $400 tier is defined in SoFi's terms, which were not fully extracted in this session.",
+          "source": "https://www.sofi.com/banking/high-yield-savings-account/"
+        }
+      ]
+    },
+    {
+      "id": "amex-hysa",
+      "bank_id": "amex",
+      "product": "American Express High Yield Savings",
+      "apy": 3.20,
+      "apy_as_of": null,
+      "apy_as_of_text": "No effective date printed next to the APY on the captured page. Captured 2026-10-22.",
+      "rate_type": "Variable",
+      "compounding": "Interest compounded daily, credited monthly",
+      "min_open": 0,
+      "min_open_text": "No minimum deposit",
+      "min_to_earn_text": "No minimum balance",
+      "monthly_fee": 0,
+      "fee_text": "No fee to open, no monthly fees",
+      "fee_waiver": "Not applicable (no monthly fee)",
+      "withdrawal_rule": "Transfers initiated at American Express can qualify for express transfers that may appear the same day",
+      "atm": "No ATM card, debit card or checks are provided on the savings account",
+      "tiers": [{"min": 0, "apy": 3.20, "label": "All balances"}],
+      "sources": [
+        {"label": "American Express - High Yield Savings (official)", "url": "https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/"},
+        {"label": "American Express - Online Savings overview (official)", "url": "https://www.americanexpress.com/en-us/banking/online-savings/account/"}
+      ],
+      "verified": true,
+      "flags": [
+        "APY has no printed effective date on the official page, so the as-of value is left blank and the capture date is recorded instead.",
+        "FDIC certificate number was not retrieved from the FDIC API in this session (see FDIC Coverage page)."
+      ],
+      "promos": []
+    },
+    {
+      "id": "capitalone-360ps",
+      "bank_id": "capitalone",
+      "product": "360 Performance Savings",
+      "apy": 3.20,
+      "apy_as_of": "2026-10-21",
+      "apy_as_of_text": "\"Variable APY ... effective as of 10/21/2026\" (apply.capitalone.com product page)",
+      "rate_type": "Variable",
+      "compounding": "Not stated on captured pages",
+      "min_open": 0,
+      "min_open_text": "No minimum balance required",
+      "min_to_earn_text": "Same rate on the entire balance (no tiers)",
+      "monthly_fee": 0,
+      "fee_text": "No fees to open or keep the account",
+      "fee_waiver": "Not applicable (no monthly fee)",
+      "withdrawal_rule": "Withdraw online or at a branch; not by ATM directly (transfer to checking first)",
+      "atm": "No ATM withdrawals from the savings account; ATM access requires a linked 360 Checking account",
+      "tiers": [{"min": 0, "apy": 3.20, "label": "All balances"}],
+      "sources": [
+        {"label": "Capital One - Compare Checking & Savings Accounts (official rate listing)", "url": "https://www.capitalone.com/bank/open-an-account/"},
+        {"label": "Capital One - 360 Performance Savings (official)", "url": "https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/"},
+        {"label": "Capital One - 360 Performance Savings disclosures", "url": "https://www.capitalone.com/bank/disclosures/savings-accounts/online-performance-savings-account/"}
+      ],
+      "verified": true,
+      "flags": [
+        "The 360 Performance Savings product page rendered its APY as 'NaN APY' when captured (the rate is injected by client-side JavaScript). The 3.20% figure was taken from Capital One's own account-comparison page and its application page, both on capitalone.com/apply.capitalone.com, which print 3.20% APY effective 10/21/2026."
+      ],
+      "promos": []
+    },
+    {
+      "id": "ally-savings",
+      "bank_id": "ally",
+      "product": "Ally Bank Savings Account",
+      "apy": 3.10,
+      "apy_as_of": "2026-10-21",
+      "apy_as_of_text": "\"3.1% correct as of 10/21/26\"; \"APYs are accurate as of 10/21/2026\"",
+      "rate_type": "Variable",
+      "compounding": "Interest compounded daily",
+      "min_open": 0,
+      "min_open_text": "No minimum balance required to open an account or earn APY",
+      "min_to_earn_text": "No minimum balance required to earn APY",
+      "monthly_fee": 0,
+      "fee_text": "No monthly maintenance fees",
+      "fee_waiver": "Not applicable (no monthly maintenance fee)",
+      "withdrawal_rule": "Ten withdrawals/transfers per statement cycle (combined with Money Market). No fee for exceeding the limit, but repeated excess use can close the account.",
+      "atm": "ATM access is via the linked Ally Spending (interest checking) account",
+      "tiers": [{"min": 0, "apy": 3.10, "label": "All balances"}],
+      "sources": [
+        {"label": "Ally Bank - Compare Savings (official rate table)", "url": "https://www.ally.com/bank/savings-account-rates/"},
+        {"label": "Ally Bank - Savings Account product page (official)", "url": "https://www.ally.com/bank/online-savings-account/"},
+        {"label": "Ally Bank - FDIC coverage", "url": "https://www.ally.com/bank/fdic/"}
+      ],
+      "verified": true,
+      "flags": [],
+      "promos": []
+    },
+    {
+      "id": "usbank-smartly",
+      "bank_id": "usbank",
+      "product": "Bank Smartly Savings",
+      "apy": 0.05,
+      "apy_as_of": "2026-10-21",
+      "apy_as_of_text": "\"effective as of October 21, 2026\" (for ZIP code 55402 shown by default)",
+      "rate_type": "Variable",
+      "compounding": "Not stated on captured page",
+      "min_open": 25,
+      "min_open_text": "$25 minimum opening deposit",
+      "min_to_earn_text": "Standard rate on all balances; higher relationship tiers require Combined Qualifying Balances (CQB) in eligible U.S. Bank accounts",
+      "monthly_fee": 5,
+      "fee_text": "$5 monthly maintenance fee",
+      "fee_waiver": "Can be waived when you are an account owner of eligible accounts (per U.S. Bank footnote 2)",
+      "withdrawal_rule": "Not stated on captured page",
+      "atm": "$0 ATM transaction and surcharge fees at U.S. Bank ATMs",
+      "tiers": [
+        {"min": 0, "apy": 0.05, "label": "Standard rate, no relationship requirement"},
+        {"min": 0, "apy": 1.00, "label": "Relationship rate, CQB under $5,000", "requires": "Smartly Checking, Safe Debit or Smartly Visa Signature card"},
+        {"min": 5000, "apy": 2.00, "label": "Relationship rate, CQB $5,000 - $24,999.99", "requires": "Smartly Checking, Safe Debit or Smartly Visa Signature card"},
+        {"min": 25000, "apy": 3.50, "label": "Relationship rate, CQB $25,000+", "requires": "Smartly Checking, Safe Debit or Smartly Visa Signature card"}
+      ],
+      "sources": [
+        {"label": "U.S. Bank - Savings account interest rates (official rate table)", "url": "https://www.usbank.com/bank-accounts/savings-accounts/bank-smartly-savings/savings-account-interest-rates.html"},
+        {"label": "U.S. Bank - Savings accounts overview", "url": "https://www.usbank.com/bank-accounts/savings-accounts.html"}
+      ],
+      "verified": true,
+      "flags": [
+        "Rates are displayed for a ZIP code (55402 shown by default when captured). U.S. Bank states APYs may vary by location. New York-area rates were not requested, so the geographic value is unconfirmed.",
+        "The 3.50% tier requires $25,000 in Combined Qualifying Balances across U.S. Bank accounts plus a qualifying checking/debit/card relationship - not just a $25,000 savings deposit."
+      ],
+      "promos": []
+    },
+    {
+      "id": "wellsfargo-platinum-promo",
+      "bank_id": "wellsfargo",
+      "product": "Platinum Savings (new-savings-customer promotional rate)",
+      "apy": 3.25,
+      "apy_as_of": null,
+      "apy_as_of_text": "No effective date printed in the captured rate table. Captured 2026-10-22.",
+      "rate_type": "Variable",
+      "compounding": "Interest compounded daily for a 365-day period (per Wells Fargo footnote)",
+      "min_open": 25,
+      "min_open_text": "$25 minimum opening deposit",
+      "min_to_earn_text": "Requires depositing and maintaining $25,000 or more in the new Platinum Savings account within 30 days",
+      "monthly_fee": 12,
+      "fee_text": "$12 monthly service fee",
+      "fee_waiver": "Avoid the $12 fee with a $3,500 minimum daily balance each fee period",
+      "withdrawal_rule": "Not stated on captured page",
+      "atm": "Not stated on captured page",
+      "tiers": [
+        {"min": 0, "apy": 0.01, "label": "Standard Platinum Savings rate (all customers, $0+)"},
+        {"min": 25000, "apy": 3.25, "label": "New savings customers only, $25,000+ balance (promotional, variable)"}
+      ],
+      "sources": [
+        {"label": "Wells Fargo - Savings and CD interest rates (official rate table)", "url": "https://www.wellsfargo.com/savings-cds/rates/"},
+        {"label": "Wells Fargo - Platinum Savings product page", "url": "https://www.wellsfargo.com/savings-cds/platinum/"}
+      ],
+      "verified": true,
+      "flags": [
+        "Wells Fargo's rate page defaulted to ZIP 94105 (California) when captured. Rates and offers can vary by location; New York values were not requested.",
+        "The 3.25% APY is restricted to new Wells Fargo savings customers and to balances of $25,000 or more. Below $25,000 the standard Platinum Savings rate is 0.01% APY.",
+        "The captured rate table carries no printed effective date."
+      ],
+      "promos": [
+        {
+          "title": "Promotional 3.25% APY for new savings customers with $25,000+",
+          "detail": "Wells Fargo: \"Earn 3.25% APY as a new Wells Fargo savings customer. Rate is variable and requires you to deposit and maintain $25,000 or more in your new Platinum Savings Account within 30 days. Rate is for new savings customers only.\"",
+          "source": "https://www.wellsfargo.com/savings-cds/rates/"
+        }
+      ]
+    },
+    {
+      "id": "wellsfargo-way2save",
+      "bank_id": "wellsfargo",
+      "product": "Way2Save Savings",
+      "apy": 0.01,
+      "apy_as_of": null,
+      "apy_as_of_text": "No effective date printed in the captured rate table. Captured 2026-10-22.",
+      "rate_type": "Variable",
+      "compounding": "Not stated on captured page",
+      "min_open": 25,
+      "min_open_text": "$25 minimum opening deposit",
+      "min_to_earn_text": "$0 or more (standard rate on all balances)",
+      "monthly_fee": 5,
+      "fee_text": "$5 monthly service fee",
+      "fee_waiver": "Ways to avoid the $5 fee are described on a dedicated Wells Fargo page",
+      "withdrawal_rule": "Not stated on captured page",
+      "atm": "Not stated on captured page",
+      "tiers": [{"min": 0, "apy": 0.01, "label": "All balances"}],
+      "sources": [
+        {"label": "Wells Fargo - Savings and CD interest rates (official rate table)", "url": "https://www.wellsfargo.com/savings-cds/rates/"},
+        {"label": "Wells Fargo - Way2Save monthly service fee", "url": "https://www.wellsfargo.com/savings-cds/way2save/way2save-monthly-service-fee/"}
+      ],
+      "verified": true,
+      "flags": ["Rate shown for ZIP 94105 (default when captured); may vary by location."],
+      "promos": []
+    },
+    {
+      "id": "bofa-advantage",
+      "bank_id": "bofa",
+      "product": "Advantage Savings (standard rate)",
+      "apy": 0.04,
+      "apy_as_of": "2026-10-21",
+      "apy_as_of_text": "\"Effective as of: October 21, 2026\" (New York - Tri-State Area rate sheet PDF)",
+      "rate_type": "Variable",
+      "compounding": "Not stated on the captured rate sheet",
+      "min_open": null,
+      "min_open_text": "",
+      "min_to_earn_text": "0.04% APY applies to every balance tier from less than $5,000 through $10,000,000+",
+      "monthly_fee": null,
+      "fee_text": "",
+      "fee_waiver": "",
+      "withdrawal_rule": "Not stated on the captured rate sheet",
+      "atm": "Not stated on the captured rate sheet",
+      "tiers": [
+        {"min": 0, "apy": 0.04, "label": "All balance tiers (under $5,000 through $10,000,000+)"}
+      ],
+      "sources": [
+        {"label": "Bank of America - Deposit Interest Rates & APYs, New York Tri-State Area (official PDF, effective 10/21/2026)", "url": "https://media.bac-assets.com/DigitalDeposit_NY_NY_Tri_State_Area.pdf"},
+        {"label": "Bank of America - Bank account interest rates (rate-sheet gateway)", "url": "https://www.bankofamerica.com/deposits/bank-account-interest-rates/"}
+      ],
+      "verified": true,
+      "flags": [
+        "Minimum opening deposit and the monthly maintenance fee amount were NOT confirmed from an official Bank of America page in this session (Bank of America's product page rendered the fee as a placeholder '$XXXX'). Those cells are intentionally left blank.",
+        "The rate sheet is the New York Tri-State Area version, which matches a New York City account opening.",
+        "The rate sheet states a $250,000 new-account opening limit in the online channel."
+      ],
+      "promos": []
+    },
+    {
+      "id": "truist-one",
+      "bank_id": "truist",
+      "product": "Truist One Savings",
+      "apy": 0.01,
+      "apy_as_of": "2026-09-28",
+      "apy_as_of_text": "\"Interest rates and annual percentage yields (APY) are accurate as of 9/28/2026\"",
+      "rate_type": "Variable",
+      "compounding": "Calculated and compounded daily, credited monthly",
+      "min_open": 50,
+      "min_open_text": "$50 minimum opening deposit",
+      "min_to_earn_text": "0.01% APY on every tier from $0 to $99,999,999,999.99 (no tiers)",
+      "monthly_fee": 5,
+      "fee_text": "$5 monthly maintenance fee",
+      "fee_waiver": "$300 minimum daily ledger balance OR a recurring internal transfer of $25+ per statement cycle OR minor under 18 OR any related Truist checking product",
+      "withdrawal_rule": "$5 fee per withdrawal over six per statement cycle, maximum six such fees per cycle",
+      "atm": "No fee at Truist ATMs; $3 per transaction at non-Truist domestic ATMs (rising to $3.50 on 11/09/2026); $5 international",
+      "tiers": [{"min": 0, "apy": 0.01, "label": "All balances"}],
+      "sources": [
+        {"label": "Truist - Truist One Savings disclosure and fees (official rate table)", "url": "https://www.truist.com/savings/truist-one-savings/disclosures-and-fees"},
+        {"label": "Truist - Truist One Savings account overview (official PDF)", "url": "https://www.truist.com/content/dam/truist-bank/us/en/documents/disclosures/personal/aog-truist-one-savings.pdf"}
+      ],
+      "verified": true,
+      "flags": [],
+      "promos": []
+    },
+    {
+      "id": "schwab-investor-savings",
+      "bank_id": "schwab",
+      "product": "Schwab Bank Investor Savings",
+      "apy": 0.15,
+      "apy_as_of": null,
+      "apy_as_of_text": "No effective date printed next to the APY on the captured page. Captured 2026-10-22.",
+      "rate_type": "Variable",
+      "compounding": "Not stated on captured page",
+      "min_open": null,
+      "min_open_text": "",
+      "min_to_earn_text": "0.15% APY on the savings account balance",
+      "monthly_fee": 0,
+      "fee_text": "No monthly service fees",
+      "fee_waiver": "Not applicable (no monthly service fee)",
+      "withdrawal_rule": "Not stated on captured page",
+      "atm": "Unlimited ATM fee rebates worldwide; Visa Platinum debit card",
+      "tiers": [{"min": 0, "apy": 0.15, "label": "All balances"}],
+      "sources": [
+        {"label": "Charles Schwab - Investor Savings Account (official)", "url": "https://www.schwab.com/savings"}
+      ],
+      "verified": true,
+      "flags": [
+        "Minimum opening deposit was not stated on the captured page.",
+        "The official page says the account is opened by mailed/downloaded application or by phone - not by fully digital onboarding."
+      ],
+      "promos": []
+    },
+    {
+      "id": "chase-savings",
+      "bank_id": "chase",
+      "product": "Chase Savings",
+      "apy": null,
+      "apy_as_of": null,
+      "apy_as_of_text": "UNVERIFIED - Chase requires a 5-digit ZIP code before it will display its savings rate table.",
+      "rate_type": "Variable",
+      "compounding": "Compounded and credited monthly, based on the daily collected balance",
+      "min_open": 0,
+      "min_open_text": "No minimum balance to open",
+      "min_to_earn_text": "",
+      "monthly_fee": 5,
+      "fee_text": "$5 monthly service fee",
+      "fee_waiver": "$300+ balance at the beginning of each day OR $25+ in total Autosave/repeating automatic transfers from a Chase checking account OR a linked qualifying checking account OR a linked Chase College Checking account with Overdraft Protection OR an owner under 25",
+      "withdrawal_rule": "Not stated on captured page",
+      "atm": "Not stated on captured page",
+      "tiers": [],
+      "sources": [
+        {"label": "Chase - Chase Savings product page (official)", "url": "https://www.chase.com/personal/savings/savings-account"},
+        {"label": "Chase - Chase Savings interest rates (ZIP-gated)", "url": "https://www.chase.com/personal/savings/savings-account/interest-rates"},
+        {"label": "Chase - Account disclosures and rates", "url": "https://www.chase.com/digital/disclosures-and-interest-rates-personal"}
+      ],
+      "verified": false,
+      "flags": [
+        "APY left blank: Chase shows its rates only after a ZIP code is entered, and the page states 'In order to see rates table, please provide valid 5-digit zip code.' No official Chase page captured in this session printed a savings APY.",
+        "Third-party trackers show roughly 0.01%-0.02% APY for this account, but third-party values are not used in this repo."
+      ],
+      "promos": [
+        {
+          "title": "$100 / $200 new-savings-customer bonus",
+          "detail": "$100 when you deposit $5,000-$9,999 in new money; $200 when you deposit $10,000+. Deposit within 30 days of offer enrollment; the bonus is determined on day 30; maintain the new money for 90 days from enrollment to receive it. Not available to existing Chase savings customers. Offer expires 01/27/2027.",
+          "source": "https://account.chase.com/consumer/banking/savingsoffer"
+        }
+      ]
+    },
+    {
+      "id": "citi-accelerate",
+      "bank_id": "citi",
+      "product": "Citi Accelerate Savings",
+      "apy": null,
+      "apy_as_of": null,
+      "apy_as_of_text": "UNVERIFIED - the official Citi page renders the savings APY through a dynamic placeholder (':BLUE_AccSavings_Rate%').",
+      "rate_type": "Variable",
+      "compounding": "Not stated on captured page",
+      "min_open": null,
+      "min_open_text": "",
+      "min_to_earn_text": "",
+      "monthly_fee": null,
+      "fee_text": "",
+      "fee_waiver": "Savings monthly service fee is waived with a $500+ average monthly balance or a Citi checking account; the fee amount itself was not captured from an official Citi page.",
+      "withdrawal_rule": "Not stated on captured page",
+      "atm": "65,000+ fee-free ATMs nationwide (Citi statement)",
+      "tiers": [],
+      "sources": [
+        {"label": "Citi - Savings Account product page (official)", "url": "https://www.citi.com/banking/savings-account"},
+        {"label": "Citi - Compare relationship tiers (official APY-date footnote)", "url": "https://www.citi.com/banking/compare-bank-accounts"},
+        {"label": "Citi - Current interest rates (dynamic page, produced no readable rate table)", "url": "https://www.citi.com/banking/current-interest-rates/savings-accounts"}
+      ],
+      "verified": false,
+      "flags": [
+        "APY left blank: no official Citi page captured in this session displayed a numeric savings APY. Citi's footnote only says the APY 'is accurate as of 10/21/2026' without printing a value in the captured HTML.",
+        "Third-party trackers quote 3.00% APY for Citi Accelerate Savings, but third-party values are not used in this repo. Confirm the rate in the Citi app or by calling Citi."
+      ],
+      "promos": []
+    },
+    {
+      "id": "td-simple-savings",
+      "bank_id": "td",
+      "product": "TD Simple Savings",
+      "apy": null,
+      "apy_as_of": null,
+      "apy_as_of_text": "UNVERIFIED - TD's rate table renders empty cells until a location is selected. TD does print 'APY is accurate as of 10/21/2026' as a footnote.",
+      "rate_type": "Variable",
+      "compounding": "Not stated on captured page",
+      "min_open": 0,
+      "min_open_text": "$0 minimum opening deposit (account closes if unfunded after 45 days)",
+      "min_to_earn_text": "",
+      "monthly_fee": 5,
+      "fee_text": "$5 monthly maintenance fee",
+      "fee_waiver": "$300 minimum daily balance OR a monthly recurring transfer of $25+ from a linked TD checking account for the first year OR age 18 or under / 62 or older OR linked TD Beyond/Complete Checking",
+      "withdrawal_rule": "Not stated on captured page",
+      "atm": "Free at TD ATMs",
+      "tiers": [],
+      "sources": [
+        {"label": "TD Bank - Savings accounts (official)", "url": "https://www.td.com/us/en/personal-banking/savings-accounts"},
+        {"label": "TD Bank - Savings rates (location-gated)", "url": "https://www.td.com/us/en/personal-banking/savings-accounts/rates"},
+        {"label": "TD Bank - Simple Savings account guide (official PDF)", "url": "https://www.td.com/content/dam/tdb/document/pdf/personal-banking/simple-savings-en.pdf"}
+      ],
+      "verified": false,
+      "flags": [
+        "APY left blank: TD's official rate tables for both Simple Savings and Signature Savings were empty in the captured HTML and only fill after a location is selected."
+      ],
+      "promos": []
+    },
+    {
+      "id": "td-signature-savings",
+      "bank_id": "td",
+      "product": "TD Signature Savings",
+      "apy": null,
+      "apy_as_of": null,
+      "apy_as_of_text": "UNVERIFIED - location-gated rate table (see TD Simple Savings).",
+      "rate_type": "Variable (tiered) + rate bump with a linked TD account",
+      "compounding": "Not stated on captured page",
+      "min_open": 0,
+      "min_open_text": "$0 minimum opening deposit (account closes if unfunded after 45 days)",
+      "min_to_earn_text": "Tiered by balance; TD advertises 'rates up to' a maximum with a $250,000 minimum balance, but the percentage did not render",
+      "monthly_fee": 15,
+      "fee_text": "$15 monthly maintenance fee",
+      "fee_waiver": "$10,000 minimum daily balance OR a linked eligible TD checking account",
+      "withdrawal_rule": "Not stated on captured page",
+      "atm": "No TD ATM fees; non-TD ATM fees reimbursed with a $2,500 minimum daily balance",
+      "tiers": [],
+      "sources": [
+        {"label": "TD Bank - Savings accounts (official)", "url": "https://www.td.com/us/en/personal-banking/savings-accounts"},
+        {"label": "TD Bank - Savings rates (location-gated)", "url": "https://www.td.com/us/en/personal-banking/savings-accounts/rates"},
+        {"label": "TD Bank - Signature Savings account guide (official PDF)", "url": "https://www.td.com/content/dam/tdb/document/pdf/personal-banking/signature-savings-account-guide-acc-en.pdf"}
+      ],
+      "verified": false,
+      "flags": ["APY left blank: percentage cells did not render without a selected location."],
+      "promos": []
+    }
+  ]
+}

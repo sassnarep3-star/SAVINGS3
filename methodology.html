@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology · Savings Account Research</title>
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> Savings Research</a>
+    <nav class="nav"><a href="index.html">Dashboard</a><a href="accounts.html">Accounts</a><a href="returns.html">Returns</a><a href="fdic-insurance.html">FDIC Coverage</a><a href="bonuses.html">Bonuses</a><a href="rates-competitiveness.html">Rate Check</a><a href="security-apps.html">App & Security</a><a href="flagged.html">Flagged</a><a href="methodology.html" class="active">Method</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="page-head">
+    <h1>Methodology</h1>
+    <p class="sub">Dates, inclusion rules, the exact arithmetic, and the limits of what was verified.</p>
+  </div>
+  
+<p class="lede">The rules this repository was built under, so the tables can be audited rather than trusted.</p>
+
+<section class="section">
+  <h2>Dates</h2>
+  <table class="mini wide">
+    <tr><td>Research capture date</td><td>2026-10-22 (UTC)</td></tr>
+    <tr><td>Assumed account opening date</td><td>2026-10-23</td></tr>
+    <tr><td>FDIC national rate effective</td><td>2026-10-19
+        (<a href="https://www.fdic.gov/national-rates-and-rate-caps" target="_blank" rel="noopener">FDIC source</a>)</td></tr>
+    <tr><td>Rates used</td><td>The rate printed on the bank's page at capture, with the bank's own "as of" date
+        recorded beside it. Where the bank printed no date, the cell says "not printed".</td></tr>
+    <tr><td>Sources for the rows above</td><td>
+        <a href="https://www.fdic.gov/national-rates-and-rate-caps" target="_blank" rel="noopener">FDIC National Rates</a> ·
+        <a href="data/meta.json">data/meta.json</a></td></tr>
+  </table>
+</section>
+
+<section class="section">
+  <h2>Inclusion rules</h2>
+  <ul class="list">
+    <li><strong>Large national banks first.</strong> The list covers the largest branch networks (Chase, Bank of
+        America, Wells Fargo, Citibank, U.S. Bank, PNC, Truist, TD, Fifth Third, Citizens) plus national
+        digital banks that are themselves FDIC-insured and app-first (Capital One, Ally, American Express,
+        Marcus/Goldman Sachs, Synchrony, SoFi, Schwab). Small local banks and credit unions are out of scope by
+        request.</li>
+    <li><strong>Every bank must be an FDIC-insured institution.</strong> Confirmed through FDIC institution
+        records, not the bank's marketing.</li>
+    <li><strong>A rate row needs a number from the bank.</strong> If the bank would not print it, the row keeps
+        its fees and rules but the APY is blank.</li>
+    <li><strong>No aggregators.</strong> NerdWallet, Bankrate, Forbes, depositaccounts and similar were not used
+        as sources for any value on this site, even where they agree with the numbers shown.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Arithmetic</h2>
+  <table class="mini wide">
+    <tr><td>Ending balance</td><td>deposit × (1 + APY / 100)<sup>years</sup>
+        (<a href="https://www.fdic.gov/resources/deposit-insurance/faq" target="_blank" rel="noopener">APY definition</a>)</td></tr>
+    <tr><td>Interest</td><td>ending balance − deposit</td></tr>
+    <tr><td>Annual interest (displayed)</td><td>deposit × APY / 100</td></tr>
+    <tr><td>Tier selection</td><td>The highest tier whose minimum balance is at or below the deposit
+        (<a href="https://www.usbank.com/bank-accounts/savings-accounts/bank-smartly-savings/savings-account-interest-rates.html" target="_blank" rel="noopener">tiered example</a>)</td></tr>
+    <tr><td>Benchmark</td><td>FDIC national savings rate 0.38%, effective 2026-10-19
+        (<a href="https://www.fdic.gov/national-rates-and-rate-caps" target="_blank" rel="noopener">FDIC source</a>)</td></tr>
+    <tr><td>Annualised bonus equivalent</td><td>bonus ÷ deposit × 365 ÷ required holding days
+        (<a href="https://account.chase.com/consumer/banking/savingsoffer" target="_blank" rel="noopener">example offer</a>)</td></tr>
+  </table>
+  <p class="note">APY is required to reflect compounding, so (1 + APY) is the correct one-year factor for a
+  lump sum. Holding the same APY for N years is a <em>model</em>: every account on this site is variable-rate
+  except the CDs in the context table.</p>
+</section>
+
+<section class="section">
+  <h2>Limits of this research</h2>
+  <ul class="list">
+    <li>Rates were read from public pages, not from inside an authenticated account. A logged-in customer may
+        see a different, personalised rate — U.S. Bank and TD both say so explicitly.</li>
+    <li>Rate pages that require a ZIP code or client-side rendering may show different values for a New York
+        address than the ones captured. Those cases are flagged.</li>
+    <li>APYs are variable unless labelled fixed. Nothing here forecasts where rates go.</li>
+    <li>Tax is not modelled. Interest is taxable income in the year it is credited.</li>
+    <li>Account-opening identity requirements, funding windows and bonus eligibility were transcribed where the
+        bank printed them; they were not tested by opening an account.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Reproducing the site</h2>
+  <p class="note">The pages are generated, not hand-edited: <code>python3 scripts/build_site.py</code> reads
+  <code>data/*.json</code> and rewrites the HTML. Every fact lives in the JSON with its source URL, so a change
+  to a rate is one edit and one rebuild.</p>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Captured 2026-10-22 (UTC).</strong> Projected opening date 2026-10-23. Every rate, fee and rule
+    on this site is transcribed from the official page linked in the same row. Blank means the value could
+    not be confirmed on an official page — see <a href="flagged.html">Flagged for Review</a>.
+    Nothing here is financial advice.</p>
+  </div>
+</footer>
+</body>
+</html>
