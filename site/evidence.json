@@ -1,0 +1,218 @@
+{
+  "checked": "2026-10-22",
+  "opening_date_scenario": "2026-10-22",
+  "sources": {
+    "marcus": {
+      "title": "Marcus savings",
+      "url": "https://www.marcus.com/us/en/savings/high-yield-savings",
+      "observed": "3.50% APY; as of October 21, 2026; no fees or minimum deposit; apply online or in app."
+    },
+    "marcus-security": {
+      "title": "Marcus online banking",
+      "url": "https://www.marcus.com/us/en/online-banking",
+      "observed": "Multi-factor authentication, SSL encryption and firewalls; FDIC insured."
+    },
+    "marcus-fdic": {
+      "title": "Marcus FAQs",
+      "url": "https://www.marcus.com/us/en/faqs",
+      "observed": "Accounts provided by Goldman Sachs Bank USA; combined deposit coverage applies."
+    },
+    "marcus-eligibility": {
+      "title": "Marcus deposit agreement",
+      "url": "https://www.marcus.com/content/dam/marcus/us/en/pdfs/Marcus_Deposit_Account_Agreement.pdf",
+      "observed": "Effective June 27, 2025: age 18+, SSN or ITIN, qualifying street address in US, specified territories or military base/embassy."
+    },
+    "referral": {
+      "title": "Marcus referral terms",
+      "url": "https://www.marcus.com/us/en/savings/referrals",
+      "observed": "3-month 1.00 percentage-point APY boost; recipient must use referral link; standard APY variable. Full eligibility terms require review."
+    },
+    "capital": {
+      "title": "Capital One comparison / application destination",
+      "url": "https://www.capitalone.com/bank/open-an-account/?sourceApplication=PSP_WEB",
+      "observed": "3.20% APY; no fees or minimums; FDIC insured; mobile app. Application URL redirects here."
+    },
+    "capital-disclosure": {
+      "title": "Capital One savings disclosure",
+      "url": "https://www.capitalone.com/bank/disclosures/savings-accounts/online-performance-savings-account/",
+      "observed": "No minimum opening deposit or balance for APY. Some extracted rate values show NaN."
+    },
+    "capital-product": {
+      "title": "Capital One savings product",
+      "url": "https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/",
+      "observed": "Application needs identity, address, contact, employment, annual income, tax ID and citizenship information; 60 days to fund on approval. Extracted APY is NaN."
+    },
+    "capital-app": {
+      "title": "Capital One mobile app",
+      "url": "https://www.capitalone.com/digital/tools/mobile/",
+      "observed": "App security includes two-step authentication and fraud alerts."
+    },
+    "capital-merger": {
+      "title": "Discover merger FAQs",
+      "url": "https://www.capitalone.com/help-center/discover-faqs/",
+      "observed": "Discover merged May 18, 2025; Capital One and Discover deposits jointly insured starting November 18, 2025, with possible CD exceptions."
+    },
+    "discover": {
+      "title": "Discover savings transition",
+      "url": "https://www.capitalone.com/updates/discover/savings/",
+      "observed": "Discover savings accounts transitioning to Capital One; account-specific notices determine changes."
+    },
+    "ally": {
+      "title": "Ally rates",
+      "url": "https://www.ally.com/bank/view-rates/",
+      "observed": "Savings 3.1% APY as of October 21, 2026; no minimum opening deposit or monthly maintenance fees; limit 10 certain withdrawals/transfers per statement cycle; repeated excess may close account."
+    },
+    "ally-product": {
+      "title": "Ally savings",
+      "url": "https://www.ally.com/bank/online-savings-account/",
+      "observed": "FDIC insured to applicable limits; daily compounding."
+    },
+    "ally-security": {
+      "title": "Ally security",
+      "url": "https://www.ally.com/security/our-approach/",
+      "observed": "Multi-factor authentication; online/mobile banking unauthorized transaction guarantee conditioned on reporting within 60 days of statement availability."
+    },
+    "amex": {
+      "title": "Amex savings and footnotes",
+      "url": "https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/",
+      "observed": "3.20% APY as of October 21, 2026; no minimum deposit or monthly fees; daily compounding; Amex app; American Express National Bank Member FDIC. Identity verification then online registration and funding."
+    },
+    "amex-security": {
+      "title": "Amex savings security",
+      "url": "https://www.americanexpress.com/en-us/banking/online-savings/faq/information-protection/",
+      "observed": "Encryption, mandatory MFA and automatic logout after 5 minutes inactivity."
+    },
+    "synchrony": {
+      "title": "Synchrony savings",
+      "url": "https://www.synchrony.com/banking/products/hys-core",
+      "observed": "Headline 3.55% APY but embedded calculator 2.85%. No minimum deposit/balance/monthly fees; mobile app, FDIC insurance, 24/7 monitoring. Rate excluded pending resolution."
+    },
+    "chase": {
+      "title": "Chase Savings",
+      "url": "https://www.chase.com/personal/savings/savings-account",
+      "observed": "Monthly fee $5; one waiver is $300 balance at beginning of each day. Chase Mobile app; other waivers apply. No location-specific APY confirmed."
+    },
+    "bofa": {
+      "title": "Bank of America fee schedule",
+      "url": "https://www.bankofamerica.com/salesservices/deposits/resources/personal-schedule-fees/",
+      "observed": "Effective August 7, 2026: Advantage Savings $100 opening deposit, $8 monthly fee; new account six-month fee waiver; $500 daily balance is one ongoing waiver."
+    },
+    "wells": {
+      "title": "Wells Fargo Way2Save",
+      "url": "https://www.wellsfargo.com/savings-cds/way2save/",
+      "observed": "Opening deposit $25; monthly fee $5, waived with $300 daily minimum or other conditions; age 18+ to apply online, IDs required."
+    },
+    "citi": {
+      "title": "Citi Savings",
+      "url": "https://www.citi.com/banking/savings-account",
+      "observed": "Product/pricing based on home address; extracted APY unresolved placeholder; mobile app and FDIC insurance. $500 average monthly balance or checking account are fee-waiver paths."
+    },
+    "fdic": {
+      "title": "FDIC coverage",
+      "url": "https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance",
+      "observed": "Standard $250,000 per depositor, per insured bank, per ownership category. Same-category deposits at same bank are aggregated."
+    },
+    "fdic-interest": {
+      "title": "FDIC principal and interest",
+      "url": "https://www.fdic.gov/bank-failures/when-bank-fails-facts-depositors-creditors-and-borrowers",
+      "observed": "Coverage includes principal and accrued interest."
+    },
+    "edie": {
+      "title": "FDIC EDIE",
+      "url": "https://edie.fdic.gov/fdic_info.html",
+      "observed": "Ownership categories and coverage limits; actual coverage depends on account structure."
+    }
+  },
+  "accounts": [
+    {
+      "name": "Marcus \u2022 Goldman Sachs Bank USA",
+      "apy_percent": 3.5,
+      "minimum_opening": 0,
+      "monthly_fee_notes": "$0",
+      "rate_date": "2026-10-21",
+      "status": "Verified base rate",
+      "source_id": "marcus"
+    },
+    {
+      "name": "Capital One \u2022 360 Performance Savings",
+      "apy_percent": 3.2,
+      "minimum_opening": 0,
+      "monthly_fee_notes": "$0",
+      "rate_date": "2026-10-21\u00b9",
+      "status": "Verified comparison page\u00b9",
+      "source_id": "capital"
+    },
+    {
+      "name": "American Express \u2022 High Yield Savings",
+      "apy_percent": 3.2,
+      "minimum_opening": 0,
+      "monthly_fee_notes": "$0",
+      "rate_date": "2026-10-21",
+      "status": "Verified base rate",
+      "source_id": "amex"
+    },
+    {
+      "name": "Ally \u2022 Savings",
+      "apy_percent": 3.1,
+      "minimum_opening": 0,
+      "monthly_fee_notes": "$0",
+      "rate_date": "2026-10-21",
+      "status": "Verified base rate",
+      "source_id": "ally"
+    },
+    {
+      "name": "Synchrony \u2022 High Yield Savings",
+      "apy_percent": null,
+      "minimum_opening": 0,
+      "monthly_fee_notes": "$0",
+      "rate_date": "",
+      "status": "Conflicting rate \u2014 unverified",
+      "source_id": "synchrony"
+    },
+    {
+      "name": "Chase \u2022 Savings",
+      "apy_percent": null,
+      "minimum_opening": null,
+      "monthly_fee_notes": "$5; $300 daily beginning balance waives",
+      "rate_date": "",
+      "status": "APY unverified",
+      "source_id": "chase"
+    },
+    {
+      "name": "Bank of America \u2022 Advantage Savings",
+      "apy_percent": null,
+      "minimum_opening": 100,
+      "monthly_fee_notes": "$8; $500 daily minimum waives; first 6 months waived",
+      "rate_date": "",
+      "status": "APY / app / security unverified",
+      "source_id": "bofa"
+    },
+    {
+      "name": "Wells Fargo \u2022 Way2Save",
+      "apy_percent": null,
+      "minimum_opening": 25,
+      "monthly_fee_notes": "$5; $300 daily minimum waives",
+      "rate_date": "",
+      "status": "APY / app / security unverified",
+      "source_id": "wells"
+    },
+    {
+      "name": "Citi \u2022 Savings / Accelerate",
+      "apy_percent": null,
+      "minimum_opening": null,
+      "monthly_fee_notes": "$500 average monthly balance or checking waives; fee amount unverified",
+      "rate_date": "",
+      "status": "APY / geography unverified",
+      "source_id": "citi"
+    },
+    {
+      "name": "Discover \u2022 legacy savings",
+      "apy_percent": null,
+      "minimum_opening": null,
+      "monthly_fee_notes": "",
+      "rate_date": "",
+      "status": "Transition; not ranked separately",
+      "source_id": "discover"
+    }
+  ]
+}

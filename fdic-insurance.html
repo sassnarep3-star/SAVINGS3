@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FDIC Coverage · Savings Account Research</title>
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> Savings Research</a>
+    <nav class="nav"><a href="index.html">Dashboard</a><a href="accounts.html">Accounts</a><a href="returns.html">Returns</a><a href="fdic-insurance.html" class="active">FDIC Coverage</a><a href="bonuses.html">Bonuses</a><a href="rates-competitiveness.html">Rate Check</a><a href="security-apps.html">App & Security</a><a href="flagged.html">Flagged</a><a href="methodology.html">Method</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="page-head">
+    <h1>FDIC Coverage</h1>
+    <p class="sub">How the $250,000 limit actually works, which structures reach $1,250,000, and the FDIC record for every bank reviewed.</p>
+  </div>
+  
+<p class="lede">The requirement was "max FDIC insurance". That is set at <strong>$250,000 per depositor, per
+FDIC-insured bank, per ownership category</strong>, and it is automatic once the money sits in a deposit
+account at an FDIC-insured bank. What changes is how many <em>ownership categories</em> you use.</p>
+
+<section class="grid cards">
+  <div class="card"><span class="label">Per depositor, per bank</span><span class="big">$250,000</span>
+    <span class="muted">Single-owner savings account</span></div>
+  <div class="card"><span class="label">Joint account, 2 owners</span><span class="big">$500,000</span>
+    <span class="muted">$250,000 per co-owner</span></div>
+  <div class="card"><span class="label">POD with 5 beneficiaries</span><span class="big">$1,250,000</span>
+    <span class="muted">Capped at $1,250,000 per owner</span></div>
+  <div class="card"><span class="label">Five separate banks</span><span class="big">$1,250,000</span>
+    <span class="muted">$250,000 single-owner each</span></div>
+</section>
+
+<section class="section">
+  <h2>Coverage by ownership structure</h2>
+  <div class="table-scroll">
+  <table class="table">
+    <thead><tr><th>Structure</th><th class="num">Insured amount</th><th>Source</th></tr></thead>
+    <tbody><tr><td>Single-owner savings account, one bank<span class='cell-sub'>1 owner x $250,000</span></td><td class='num strong'>$250,000</td><td><a href='https://www.fdic.gov/resources/deposit-insurance/financial-products-insured' target='_blank' rel='noopener'>FDIC</a></td></tr><tr><td>Joint savings account (2 owners), one bank<span class='cell-sub'>2 co-owners x $250,000</span></td><td class='num strong'>$500,000</td><td><a href='https://www.fdic.gov/resources/deposit-insurance/financial-products-insured' target='_blank' rel='noopener'>FDIC</a></td></tr><tr><td>Single-owner account with 3 POD beneficiaries, one bank<span class='cell-sub'>1 owner x 3 beneficiaries x $250,000</span></td><td class='num strong'>$750,000</td><td><a href='https://www.fdic.gov/resources/deposit-insurance/financial-products-insured' target='_blank' rel='noopener'>FDIC</a></td></tr><tr><td>Single-owner account with 5 POD beneficiaries, one bank<span class='cell-sub'>1 owner x 5 beneficiaries x $250,000 (equals the $1,250,000 per-owner trust cap)</span></td><td class='num strong'>$1,250,000</td><td><a href='https://www.fdic.gov/resources/deposit-insurance/financial-products-insured' target='_blank' rel='noopener'>FDIC</a></td></tr><tr><td>Single-owner accounts at 5 different FDIC-insured banks<span class='cell-sub'>5 banks x $250,000</span></td><td class='num strong'>$1,250,000</td><td><a href='https://www.fdic.gov/resources/deposit-insurance/faq' target='_blank' rel='noopener'>FDIC</a></td></tr></tbody>
+  </table>
+  </div>
+  <p class="note">The trust formula is quoted directly from the FDIC:
+  <em>"# of Owners × # of Beneficiaries × $250,000 = Amount Insured (not to exceed $1,250,000 per owner for
+  all trust accounts)"</em>. Whether a specific bank will let you name five POD beneficiaries on its savings
+  account is a bank-level question and is not assumed here.</p>
+</section>
+
+<section class="section">
+  <h2>Per-bank coverage capacity</h2>
+  <p class="note">Bank identity comes from the FDIC's own institution records; certificate numbers below were
+  returned by the FDIC API during this session unless marked otherwise.</p>
+  <div class="table-scroll">
+  <table class="table">
+    <thead><tr><th>Bank</th><th class="num">FDIC cert</th><th>FDIC record</th>
+    <th class="num">Single</th><th class="num">Joint</th><th class="num">Trust</th><th>Verify</th></tr></thead>
+    <tbody><tr>
+  <td><strong>Synchrony Bank</strong><span class="cell-sub">Synchrony Bank</span></td>
+  <td class="num">27314</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=Synchrony%20Bank" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>Marcus by Goldman Sachs</strong><span class="cell-sub">Goldman Sachs Bank USA</span></td>
+  <td class="num">33124</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=Goldman%20Sachs%20Bank" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>SoFi</strong><span class="cell-sub">SoFi Bank, National Association</span></td>
+  <td class="num">26881</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=SoFi%20Bank" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>Wells Fargo</strong><span class="cell-sub">Wells Fargo Bank, National Association</span></td>
+  <td class="num">3511</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=Wells%20Fargo" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>American Express</strong><span class="cell-sub">American Express National Bank</span></td>
+  <td class="num">&lt;span class=&quot;blank&quot;&gt;not captured&lt;/span&gt;</td>
+  <td><span class="badge warn">Not confirmed</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=American%20Express%20National%20Bank" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>Capital One</strong><span class="cell-sub">Capital One, National Association</span></td>
+  <td class="num">4297</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=Capital%20One" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>Ally Bank</strong><span class="cell-sub">Ally Bank</span></td>
+  <td class="num">57803</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=Ally%20Bank" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>Charles Schwab Bank</strong><span class="cell-sub">Charles Schwab Bank, SSB</span></td>
+  <td class="num">57450</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=Charles%20Schwab%20Bank" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>U.S. Bank</strong><span class="cell-sub">U.S. Bank, National Association</span></td>
+  <td class="num">&lt;span class=&quot;blank&quot;&gt;not captured&lt;/span&gt;</td>
+  <td><span class="badge warn">Not confirmed</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=U.S.%20Bank" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>Bank of America</strong><span class="cell-sub">Bank of America, National Association</span></td>
+  <td class="num">3510</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=Bank%20of%20America" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>Wells Fargo</strong><span class="cell-sub">Wells Fargo Bank, National Association</span></td>
+  <td class="num">3511</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=Wells%20Fargo" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>Truist</strong><span class="cell-sub">Truist Bank</span></td>
+  <td class="num">9846</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=Truist" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>Chase</strong><span class="cell-sub">JPMorgan Chase Bank, National Association</span></td>
+  <td class="num">628</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=JPMorgan%20Chase" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>Citibank</strong><span class="cell-sub">Citibank, National Association</span></td>
+  <td class="num">7213</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=Citibank" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>TD Bank</strong><span class="cell-sub">TD Bank, National Association</span></td>
+  <td class="num">18409</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=TD%20Bank" target="_blank" rel="noopener">BankFind</a></td>
+</tr><tr>
+  <td><strong>TD Bank</strong><span class="cell-sub">TD Bank, National Association</span></td>
+  <td class="num">18409</td>
+  <td><span class="badge ok">Confirmed in FDIC API</span></td>
+  <td class="num">$250,000</td>
+  <td class="num">$500,000<span class="cell-sub">joint, 2 owners</span></td>
+  <td class="num">$1,250,000<span class="cell-sub">POD, 5 beneficiaries</span></td>
+  <td><a href="https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=TD%20Bank" target="_blank" rel="noopener">BankFind</a></td>
+</tr></tbody>
+  </table>
+  </div>
+  <p class="note"><strong>Certificate numbers not captured:</strong> U.S. Bank, American Express. Their coverage is advertised by the bank but the FDIC record was not retrieved here; see <a href="flagged.html">Flagged for Review</a>. Do not treat the number as confirmed.</p>
+</section>
+
+<section class="section">
+  <h2>Why splitting across five banks is harder than it looks</h2>
+  <ul class="list">
+    <li><strong>Interest drifts you over the limit.</strong> Coverage is principal plus interest through the
+        date of failure, so a balance parked at exactly $250,000 will grow past the cap. Leave headroom or
+        sweep interest out.</li>
+    <li><strong>Branches do not multiply coverage.</strong> The FDIC is explicit: "Deposits in separate branches
+        of an insured bank are not separately insured." Five branches of one bank is still one $250,000 limit.
+        Source: <a href="https://www.fdic.gov/bank-failures/when-bank-fails-facts-depositors-creditors-and-borrowers"
+        target="_blank" rel="noopener">FDIC — When a Bank Fails</a>.</li>
+    <li><strong>POD accounts need real beneficiary data.</strong> Ally's FDIC page notes that naming beneficiaries
+        requires identifying information (address, date of birth, government ID number) for each one, to satisfy the
+        FDIC's recordkeeping rules. Source: <a href="https://www.ally.com/bank/fdic/" target="_blank" rel="noopener">Ally — FDIC Insurance</a>.</li>
+    <li><strong>Brands are not banks.</strong> Capital One's help centre states Discover merged into Capital One
+        on 2025-05-18 and that from <strong>2025-11-18</strong> Capital One and Discover deposit accounts are
+        jointly insured, with some Discover CDs separately insured until maturity. The FDIC record for Discover
+        Bank shows it as inactive. Two logos can be one $250,000 limit.
+        Source: <a href="https://www.capitalone.com/help-center/discover-faqs/" target="_blank" rel="noopener">Capital One — Discover FAQs</a>.</li>
+    <li><strong>Network programs have their own terms.</strong> SoFi advertises coverage up to $3M "through a
+        network of participating banks". That is a sweep arrangement, not a single-bank limit, and it carries
+        program risk that a POD account at one bank does not.</li>
+    <li><strong>Ownership category is the real lever.</strong> A single-owner savings account, an IRA, a joint
+        account and a POD account at the same bank are separate categories — they can stack at one bank.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>What FDIC insurance does and does not cover</h2>
+  <div class="grid two">
+    <div class="panel"><h3>Covered</h3><ul class="list"><li>Checking accounts</li><li>Savings accounts</li><li>Money Market Deposit Accounts (MMDAs)</li><li>Certificates of Deposit (CDs)</li></ul></div>
+    <div class="panel"><h3>Not covered</h3><ul class="list"><li>Mutual funds</li><li>Annuities</li><li>Life insurance policies</li><li>Stocks and bonds</li><li>Crypto assets</li><li>Municipal securities</li><li>Safe deposit contents</li></ul></div>
+  </div>
+  <p class="note">Verify any specific balance with the FDIC's own calculator,
+  <a href="https://edie.fdic.gov/" target="_blank" rel="noopener">EDIE</a>, and confirm the
+  institution in <a href="https://banks.data.fdic.gov/bankfind-suite/bankfind" target="_blank" rel="noopener">BankFind</a>.</p>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Captured 2026-10-22 (UTC).</strong> Projected opening date 2026-10-23. Every rate, fee and rule
+    on this site is transcribed from the official page linked in the same row. Blank means the value could
+    not be confirmed on an official page — see <a href="flagged.html">Flagged for Review</a>.
+    Nothing here is financial advice.</p>
+  </div>
+</footer>
+</body>
+</html>

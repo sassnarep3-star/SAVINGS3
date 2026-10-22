@@ -1,0 +1,150 @@
+{
+  "capture_date": "2026-10-22",
+  "intro": "One row per bank. Each statement below was read directly from the official page linked in the same row during this session. Where a bank publishes multi-factor authentication or a security guarantee, it is quoted; where it does not, the cell is blank rather than inferred.",
+  "rows": [
+    {
+      "bank_id": "synchrony",
+      "app": "Synchrony Bank mobile app, iOS and Android (page shows App Store 4.8 and Google Play 4.6 ratings)",
+      "app_status": "Verified on official page",
+      "security": "24/7 transaction monitoring stated; customizable account alerts; FDIC insurance up to $250,000 per depositor, per insured bank, for each ownership category",
+      "two_factor": "",
+      "source": "https://www.synchrony.com/banking/products/high-yield-savings",
+      "app_source": "https://www.synchrony.com/banking/mobile-app",
+      "notes": "Synchrony's page describes 24/7 monitoring and alerts but does not print an MFA or passkey claim, so that cell is blank."
+    },
+    {
+      "bank_id": "marcus",
+      "app": "Marcus mobile app (open and manage the account from a mobile device; app page linked from the official site)",
+      "app_status": "Verified on official page",
+      "security": "\"Marcus protects your account with multi-factor authentication, SSL encryption, firewalls and other safeguards\"; FDIC insured; 7-days-a-week contact center",
+      "two_factor": "Multi-factor authentication; SSL encryption; firewalls (Marcus security statement)",
+      "source": "https://www.marcus.com/us/en/savings/high-yield-savings",
+      "app_source": "https://www.marcus.com/us/en/marcus-mobile-banking-app",
+      "notes": "Compounding: Marcus states interest compounds daily.",
+      "mfa_source": "https://www.marcus.com/us/en/online-banking"
+    },
+    {
+      "bank_id": "sofi",
+      "app": "SoFi app: mobile check deposit, customizable alerts, 24/7 account access",
+      "app_status": "Verified on official page",
+      "security": "\"We continuously monitor your account for suspicious activity to keep your money safe\"; FDIC insurance advertised up to $3M through a network of participating banks",
+      "two_factor": "",
+      "source": "https://www.sofi.com/banking/high-yield-savings-account/",
+      "app_source": "https://www.sofi.com/banking/high-yield-savings-account/",
+      "notes": "The $3M figure is a sweep-network program, not a single-bank $250,000 limit; see the FDIC Coverage page."
+    },
+    {
+      "bank_id": "amex",
+      "app": "American Express App (\"award-winning\" per Amex), iOS and Android",
+      "app_status": "Verified on official page",
+      "security": "24/7 customer support; Member FDIC with each depositor insured to at least $250,000",
+      "two_factor": "Mandatory multi-factor authentication (customers cannot opt out); 128-bit SSL; automatic logout after 5 minutes of inactivity; email confirmation on password recovery; phone security Q&A",
+      "source": "https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/",
+      "app_source": "https://www.americanexpress.com/en-us/banking/online-savings/account/",
+      "notes": "Amex states the APY is 'accurate as of 10/21/2026' in the disclosure on this page; that date is used for the APY-as-of column.",
+      "mfa_source": "https://www.americanexpress.com/en-us/banking/online-savings/faq/information-protection/"
+    },
+    {
+      "bank_id": "capitalone",
+      "app": "Capital One Mobile app: mobile check deposit, AutoSave, 24/7 access",
+      "app_status": "Verified on official page",
+      "security": "\"Banking security - Get online banking security features to help manage your money with confidence\"; FDIC-insured up to allowable limits",
+      "two_factor": "Two-step authentication, biometric sign-in (face/fingerprint), real-time fraud and purchase alerts, in-app card lock",
+      "source": "https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/",
+      "app_source": "https://www.capitalone.com/digital/tools/mobile/",
+      "notes": "App features (biometric sign-in, alerts, card lock) are stated on Capital One's app page; two-step authentication is described there as one of its security features.",
+      "mfa_source": "https://www.capitalone.com/digital/tools/mobile/"
+    },
+    {
+      "bank_id": "ally",
+      "app": "Ally mobile banking app with savings buckets, boosters and charts",
+      "app_status": "Verified on official page",
+      "security": "\"Online and mobile security guarantee\": no liability for unauthorised online or mobile banking transactions if reported within 60 days of the statement being made available; MFA, TLS, automatic logout and account monitoring",
+      "two_factor": "Multi-factor authentication (security code to a registered device); TLS encryption; firewalls; antivirus/anti-malware; automatic logout; fraud monitoring",
+      "source": "https://www.ally.com/bank/online-savings-account/",
+      "app_source": "https://www.ally.com/bank/online-savings-account/",
+      "notes": "Guarantee conditions (60-day reporting window) are stated on Ally's security page.",
+      "mfa_source": "https://www.ally.com/security/our-approach/"
+    },
+    {
+      "bank_id": "usbank",
+      "app": "U.S. Bank mobile app with goal tracking and budgeting tools",
+      "app_status": "Verified on official page",
+      "security": "\"Secure digital banking\" - manage savings anytime with mobile and online banking; FDIC insured to the maximum allowed by law",
+      "two_factor": "",
+      "source": "https://www.usbank.com/bank-accounts/savings-accounts.html",
+      "app_source": "https://www.usbank.com/online-mobile-banking/mobile-banking.html",
+      "notes": ""
+    },
+    {
+      "bank_id": "wellsfargo",
+      "app": "Wells Fargo mobile app (standard account management; mobile deposit)",
+      "app_status": "Not verified on captured page",
+      "security": "FDIC-insured up to the maximum applicable limit; a dedicated fraud-reporting path is published (see source link in nav)",
+      "two_factor": "",
+      "source": "https://www.wellsfargo.com/savings-cds/",
+      "app_source": "https://www.wellsfargo.com/privacy-security/fraud/report/",
+      "notes": "App-store listings were not opened in this session."
+    },
+    {
+      "bank_id": "bofa",
+      "app": "Bank of America Mobile Banking app (App Store and Google Play linked from the official page)",
+      "app_status": "Verified on official page",
+      "security": "FDIC-insured deposit products banner on the product page; FDIC coverage page published",
+      "two_factor": "",
+      "source": "https://www.bankofamerica.com/deposits/savings/savings-accounts/",
+      "app_source": "https://www.bankofamerica.com/online-banking/iphone-banking-app.go",
+      "notes": "Bank of America's fee schedule and savings pages do not print an MFA claim; the security center page was not opened in this session."
+    },
+    {
+      "bank_id": "chase",
+      "app": "Chase Mobile app: mobile check deposit, Autosave, bill pay, Zelle",
+      "app_status": "Verified on official page",
+      "security": "Chase states savings accounts are FDIC insured up to the maximum amount allowed by law",
+      "two_factor": "",
+      "source": "https://www.chase.com/personal/savings/savings-account",
+      "app_source": "https://www.chase.com/digital/mobile-banking",
+      "notes": ""
+    },
+    {
+      "bank_id": "citi",
+      "app": "Citi Mobile App; online banking; 65,000+ fee-free ATMs nationwide",
+      "app_status": "Verified on official page",
+      "security": "FDIC-insured savings stated on the product page",
+      "two_factor": "",
+      "source": "https://www.citi.com/banking/savings-account",
+      "app_source": "https://www.citi.com/banking/savings-account",
+      "notes": ""
+    },
+    {
+      "bank_id": "td",
+      "app": "TD Bank mobile app with TD Bank Mobile Deposit",
+      "app_status": "Verified on official page",
+      "security": "FDIC-insured savings stated on the product page",
+      "two_factor": "",
+      "source": "https://www.td.com/us/en/personal-banking/savings-accounts",
+      "app_source": "https://www.td.com/us/en/personal-banking/savings-accounts/rates",
+      "notes": ""
+    },
+    {
+      "bank_id": "truist",
+      "app": "",
+      "app_status": "Not verified on captured page",
+      "security": "No security-feature statement appeared on the captured disclosure page",
+      "two_factor": "",
+      "source": "https://www.truist.com/savings/truist-one-savings/disclosures-and-fees",
+      "app_source": "",
+      "notes": "Truist's mobile app and security claims were not verified in this session; cells left blank rather than inferred."
+    },
+    {
+      "bank_id": "schwab",
+      "app": "Schwab mobile apps with Schwab Mobile Deposit",
+      "app_status": "Verified on official page",
+      "security": "FDIC-insured savings up to $250,000; no ATM fees (rebates worldwide)",
+      "two_factor": "",
+      "source": "https://www.schwab.com/savings",
+      "app_source": "https://www.schwab.com/savings",
+      "notes": ""
+    }
+  ]
+}
