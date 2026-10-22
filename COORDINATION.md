@@ -132,7 +132,23 @@ used the Arena-fixed branch `arena/dbe2ef46-savings3` (name only).
 
 ### Publication record (third pass)
 
-* PR #5 — https://github.com/sassnarep3-star/SAVINGS3/pull/5 — merge result and Pages confirmation recorded
-  in the follow-up commit on `arena/dbe2ef46-savings3` / PR timeline after merge. Pages remains legacy
-  (`main` / root); the third pass is live at https://sassnarep3-star.github.io/SAVINGS3/docs/ once `main`
-  rebuilds, alongside `/` (second pass) and `/site/` (first pass).
+* PR #5 — https://github.com/sassnarep3-star/SAVINGS3/pull/5 — **merged successfully on 2026-10-22 at
+  00:38:42 UTC**, merge commit `cff81d6294535d87e7aa1cf087b42c93930839ad` (merged without waiting for
+  approval, per the project brief; local validation + PR CI were green first).
+* Post-merge CI on `main`: "Validate savings dashboard" run
+  [#39700924627](https://github.com/sassnarep3-star/SAVINGS3/actions/runs/39700924627) — success.
+  "pages build and deployment" run
+  [#39700923379](https://github.com/sassnarep3-star/SAVINGS3/actions/runs/39700923379) — success.
+* GitHub Pages (legacy, source `main` / root): latest build is commit `cff81d6`, `status: built`
+  (created 2026-10-22T00:38:43Z, via `GET /pages/builds/latest`). Direct HTTP requests to `*.github.io`
+  are outside this sandbox's network allowlist, so the Pages API + deployment runs are the confirmation —
+  the same standard used by passes 1–2. Live URLs:
+  * https://sassnarep3-star.github.io/SAVINGS3/docs/ — third pass (this session)
+  * https://sassnarep3-star.github.io/SAVINGS3/ — second pass (root dashboard, unchanged)
+  * https://sassnarep3-star.github.io/SAVINGS3/site/ — first pass (unchanged)
+* Local pre-merge validation on the merged tree: `scripts/build.py` + `check.py` PASS (7 pages);
+  `scripts/build_site.py` + `verify_site.py` ALL CHECKS PASSED (10 pages, 68 external links); generated-page
+  freshness diff clean; third-pass internal links/anchors checked programmatically (no errors); all 10
+  `docs/` pages + assets served HTTP 200 from a local static server.
+* No build/check/deploy failure remains unresolved. All `needs review` items stay published on
+  `flagged.html` (pass 2) and `docs/flagged.html` (pass 3, F-01–F-20); they did not block merge.
