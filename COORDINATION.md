@@ -57,11 +57,11 @@ _None as of 2026-10-22 00:05 UTC._
 
 ## Sources & verification log
 
-_To be filled as each task completes. Each entry: value → official URL → source "as of" date → verified 2026-10-22. UNVERIFIED items listed here and on the Flagged for Review page._
+Complete line-by-line log (value → official URL → source "as of" date → verified 2026-10-22) is [`docs/research-notes.md`](docs/research-notes.md) — the single source of truth for every site table. Benchmarks: FDIC national rates (fdic.gov, Oct 19, 2026 — savings 0.38%, MMA 0.63%, 12-mo CD 1.76%, 60-mo CD 1.41%); FDIC $250,000 limit (fdic.gov FAQ / Deposits at a Glance, incl. interest, per depositor/bank/ownership category); bank ranking: Federal Reserve U.S. Domestically Chartered Commercial Banks (assets June 30, 2026, posted Oct 2, 2026) → 13 charters. Best verified unconditional HYSA: Marcus 3.50% (Oct 21, 2026). Return math computed in Python from verified APYs only (FV = P×(1+APY)^t; Pmax for FDIC = $250,000/(1+APY)^t). Site validated locally 2026-10-22: all 10 HTML pages + CSS/JS + research-notes.md serve HTTP 200; internal links/anchors checked programmatically (no errors).
 
 ## Irregularities flagged
 
-_To be filled. Also published on `docs/flagged.html`._
+F-01–F-20 published on `docs/flagged.html` (non-blocking `needs review`). UNVERIFIED (blank, excluded from ROI): F-02 Citizens Access APY, F-03 Citi standard APY, F-04 TD Signature tiers, F-15 Citizens branch examples (undated), F-18 PNC Standard/Premiere APYs, F-19 Truist CD (stale). Irregularities/conditional: F-05 PNC HY date/ZIP + 3.30% affiliate conflict, F-06 U.S. Bank stale 4.00% snippet, F-07 U.S. Bank rates-page banner, F-01 Capital One "NaN APY", F-08/F-17 market-specific sheets (Chase, Wells CA, BofA VA), F-09 stale Marcus fragment, F-11 Citi promos expiring at verification, F-12 U.S. Bank $450 expired Oct 20, F-13 Ally CD mapping/deposit-based APY, F-20 Truist Sep 28 as-of. Notes: F-10 Discover→Capital One one FDIC limit, F-14 BofA no-bonus = search result, F-16 deferred regionals.
 
 ## PR & deploy log
 

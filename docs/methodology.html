@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology &amp; Sources | SAVINGS3</title>
+<meta name="description" content="How banks were selected, how every rate was verified line by line from official sources, ranking and ROI formulas, badge definitions and limitations. Verified October 22, 2026.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<h1><a href="index.html">Savings Account Comparison — Big National Banks</a></h1>
+<p>Reference: <strong>Methodology</strong> · How this comparison was built and checked — October 22, 2026.</p>
+</div></header>
+<nav class="main" aria-label="Main"><div class="wrap">
+<a href="index.html">Home</a><a href="high-yield-savings.html">High-Yield Savings</a><a href="traditional-savings.html">Traditional Savings</a><a href="money-market.html">Money Market</a><a href="cds.html">CDs</a><a href="returns.html">Returns &amp; FDIC $250k</a><a href="bonuses.html">Bonuses</a><a href="opening-and-security.html">Opening &amp; Security</a><a href="methodology.html" aria-current="page">Methodology</a><a href="flagged.html">⚠ Flagged for Review</a>
+</div></nav>
+<main id="main"><div class="wrap">
+
+<h2>Methodology</h2>
+<div class="toc"><strong>On this page:</strong><ul>
+<li><a href="#scope">1. Which banks (scope)</a></li>
+<li><a href="#verify">2. Verification protocol — line by line</a></li>
+<li><a href="#badges">3. Badges: VERIFIED / CONDITIONAL / UNVERIFIED</a></li>
+<li><a href="#rank">4. Ranking rules</a></li>
+<li><a href="#math">5. Return math</a></li>
+<li><a href="#limits">6. Limitations &amp; freshness</a></li>
+</ul></div>
+
+<h2 id="scope">1. Which banks (scope)</h2>
+<p>“Big national banks” = the largest U.S. domestically chartered commercial banks that sell consumer savings accounts to the general public with digital (online/app) access. The ranking source is the Federal Reserve’s <a href="https://www.federalreserve.gov/releases/lbr/current/">Insured U.S.-Chartered Commercial Banks</a> release (consolidated assets as of <strong>June 30, 2026</strong>, posted October 2, 2026). <strong>13 charters</strong> are covered:</p>
+<div class="tablebox"><table>
+<caption>Included FDIC charters (assets in $ millions, June 30, 2026 — Federal Reserve)</caption>
+<thead><tr><th class="num">Rank</th><th>Charter</th><th>Consumer brand(s) in this comparison</th><th class="num">Consolidated assets ($M)</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td>JPMorgan Chase Bank, N.A.</td><td>Chase</td><td class="num">$4,091,315</td></tr>
+<tr><td class="num">2</td><td>Bank of America, N.A.</td><td>Bank of America</td><td class="num">$2,654,645</td></tr>
+<tr><td class="num">3</td><td>Citibank, N.A.</td><td>Citi</td><td class="num">$1,976,180</td></tr>
+<tr><td class="num">4</td><td>Wells Fargo Bank, N.A.</td><td>Wells Fargo</td><td class="num">$1,907,928</td></tr>
+<tr><td class="num">5</td><td>Goldman Sachs Bank USA</td><td>Marcus</td><td class="num">$758,788</td></tr>
+<tr><td class="num">6</td><td>U.S. Bank N.A.</td><td>U.S. Bank</td><td class="num">$705,555</td></tr>
+<tr><td class="num">7</td><td>Capital One, N.A.</td><td>Capital One, Discover (merged May 18, 2025)</td><td class="num">$662,157</td></tr>
+<tr><td class="num">8</td><td>PNC Bank, N.A.</td><td>PNC</td><td class="num">$609,772</td></tr>
+<tr><td class="num">9</td><td>Truist Bank</td><td>Truist</td><td class="num">$548,346</td></tr>
+<tr><td class="num">13</td><td>TD Bank, N.A.</td><td>TD Bank</td><td class="num">$342,804</td></tr>
+<tr><td class="num">19</td><td>Citizens Bank, N.A.</td><td>Citizens, Citizens Access</td><td class="num">$232,517</td></tr>
+<tr><td class="num">21</td><td>American Express National Bank</td><td>American Express</td><td class="num">$213,946</td></tr>
+<tr><td class="num">23</td><td>Ally Bank</td><td>Ally</td><td class="num">$188,184</td></tr>
+</tbody></table></div>
+<p><strong>Explicitly out of scope (not an oversight):</strong> custody/wealth banks with no general-public consumer savings focus — BNY (#10), Morgan Stanley’s banks (#11/#17), State Street (#12), Northern Trust (#24). <strong>Deferred to a future round:</strong> other large regionals — Fifth Third (#14), Huntington (#15), BMO (#16), First Citizens (#18), M&amp;T (#20), KeyBank (#22), HSBC Bank USA (#25), Regions and beyond (<a href="flagged.html#f16">F-16</a>). Small/local banks and credit unions were excluded by request. <strong>This site never claims the list is every U.S. bank.</strong></p>
+
+<h2 id="verify">2. Verification protocol — line by line</h2>
+<ol>
+<li><strong>Official domains only.</strong> Every number was fetched from the bank’s own website/document (e.g., marcus.com, chase.com rate-sheet PDFs) or a U.S. government site (fdic.gov, federalreserve.gov). No review sites, affiliates, forums, or AI summaries were used as evidence.</li>
+<li><strong>Date-stamped.</strong> For each value we recorded the source page’s own “as of / effective” date. Verification sweep: <strong>October 22, 2026</strong> (most rate pages are dated Oct 21, 2026; the exceptions are flagged, e.g., Truist Sep 28, 2026 — F-20).</li>
+<li><strong>Blank beats guessed.</strong> If an official page would not render a number (ZIP gates, template tokens), the cell is blank, the account is excluded from rankings and return math, and the item is published on the <a href="flagged.html">Flagged for Review</a> page with the official link so a human can check it with their ZIP.</li>
+<li><strong>Conflicts are flagged, not averaged.</strong> Where official surfaces disagreed (search snippets, affiliate URLs, stale caches), we published the canonical page value and logged the conflict (F-05, F-06, F-09).</li>
+<li><strong>Full audit trail.</strong> Every claim on this site traces to a line in <a href="research-notes.md">research-notes.md</a> with its URL and source date. Work was coordinated via <code>COORDINATION.md</code> in the repository.</li>
+</ol>
+
+<h2 id="badges">3. Badges</h2>
+<div class="tablebox"><table style="min-width:560px">
+<thead><tr><th>Badge</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td><span class="badge b-ok">VERIFIED</span></td><td>The number (and its as-of date) was read directly from the official page on Oct 22, 2026, with no extra conditions for a standard new account.</td></tr>
+<tr><td><span class="badge b-cond">CONDITIONAL</span></td><td>Verbatim from an official page, but the headline APY needs something: a minimum/maintained balance, a linked product, new-customer status, an eligible ZIP/state, or it comes from a market-specific rate sheet. The condition is spelled out in the row — never ranked as if unconditional.</td></tr>
+<tr><td><span class="badge b-unv">UNVERIFIED</span></td><td>Could not confirm the value from an official source. Cell left blank; excluded from rankings and ROI; see Flagged for Review.</td></tr>
+<tr><td><span class="badge b-bench">BENCHMARK</span></td><td>A government statistic (e.g., FDIC national average), not an account you can open.</td></tr>
+</tbody></table></div>
+
+<h2 id="rank">4. Ranking rules</h2>
+<ul>
+<li>Accounts are ranked by <strong>verified unconditional APY</strong> first. Conditional APYs are shown in the same tables but labeled, with the qualifying conditions and the fallback rate where verified.</li>
+<li>“Up to” headline rates are never presented as the typical rate; the tier that produces the headline is stated ($25k+, $250k+, etc.).</li>
+<li>Bonuses are compared with <strong>simple % = bonus ÷ required balance</strong>, always next to the holding period, and never called an APY. Direct-deposit bonuses get no % (there is no balance to divide by).</li>
+<li>Competitiveness is measured against the <strong>FDIC national averages of Oct 19, 2026</strong> (savings 0.38%, money market 0.63%, 12-mo CD 1.76%, 60-mo CD 1.41%): multiple = APY ÷ average.</li>
+<li>Fees matter: where a monthly fee can erase interest, the break-even balance is computed and shown (Traditional Savings page).</li>
+</ul>
+
+<h2 id="math">5. Return math</h2>
+<ul>
+<li><strong>Growth:</strong> FV = P × (1 + APY)<sup>t</sup>; Interest = FV − P. Deposit sizes P = $10,000 / $50,000 / $100,000 / $250,000; horizons t = 0.5 / 1 / 2 / 3 / 5 years from the open date <strong>October 22, 2026</strong>.</li>
+<li><strong>Assumptions (always printed with the tables):</strong> APY unchanged for the whole horizon, no additional deposits/withdrawals, interest left to compound, before fees and taxes. For variable APYs this is a hypothetical illustration, not a forecast. For CDs held to maturity the APY is contractually fixed, so the same formula gives the maturity figure (sub-year CD amounts are APY-formula estimates; a bank’s day-count can differ by cents — cross-checked against Capital One’s own earnings example within rounding).</li>
+<li><strong>FDIC-safe maximum initial deposit:</strong> P<sub>max</sub> = $250,000 ÷ (1 + APY)<sup>t</sup> (single ownership category, no other deposits at that bank), because the $250,000 limit covers principal plus accrued interest.</li>
+<li>Only verified/conditional APYs enter the math. Unverified APYs produce no return figures anywhere on the site.</li>
+<li>Figures were computed programmatically and rounded to cents; recompute any cell with the calculator on the <a href="returns.html">Returns page</a>.</li>
+</ul>
+
+<h2 id="limits">6. Limitations &amp; freshness</h2>
+<ul>
+<li><strong>Rates are a snapshot.</strong> Variable APYs can change daily; several banks reprice by market/ZIP. Anything you act on should be re-confirmed on the official page (linked in every row) on the day you open.</li>
+<li><strong>Text extraction risk.</strong> Some bank pages render rates via scripts/tokens that text fetches can’t see — that is exactly why those values are blank rather than copied from third parties (Flagged page).</li>
+<li><strong>No personalized advice.</strong> Taxes, state law, estate/beneficiary design and your liquidity needs are out of scope. For coverage above $250,000 use the FDIC’s <a href="https://edie.fdic.gov/">EDIE estimator</a> or a professional adviser.</li>
+<li><strong>Corrections welcome.</strong> Flagged items include “what to check manually” instructions; repository issues/PRs can update <code>docs/research-notes.md</code> and the affected table.</li>
+</ul>
+
+</div></main>
+<footer><div class="wrap">
+<p><strong>SAVINGS3</strong> — Verified October 22, 2026. Audit trail: <a href="research-notes.md">research-notes.md</a> · <a href="flagged.html">Flagged for Review</a>. Not financial advice; not affiliated with any bank.</p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
