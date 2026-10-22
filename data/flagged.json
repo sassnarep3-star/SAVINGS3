@@ -43,19 +43,19 @@
     },
     {
       "id": "F05",
-      "severity": "Medium",
-      "topic": "Bank of America product page rendered fee placeholders",
-      "detail": "Bank of America's Advantage Savings page displayed '$XXXX or $0' and '$XXXX' for the monthly maintenance fee and the fee-waiver balance threshold, i.e. an unfilled template. The fee amount and the minimum opening deposit were therefore left blank in this repo.",
-      "value_used": "blank",
-      "value_not_used": "third-party figures ($8 fee, $100 minimum) - not used",
-      "source": "https://www.bankofamerica.com/deposits/savings/savings-accounts/",
-      "action": "Ask Bank of America for the Personal Schedule of Fees for the New York market."
+      "severity": "Low",
+      "topic": "Bank of America product page rendered unfilled fee placeholders",
+      "detail": "The Advantage Savings product page displayed '$XXXX or $0' and '$XXXX' where the monthly fee and the fee-waiver threshold belong - an unfilled template. The values shown on this site ($100 to open, $8 monthly fee, six-month new-account waiver, $500 daily-balance waiver) come from Bank of America's Personal Schedule of Fees, effective August 7, 2026, not from the product page.",
+      "value_used": "$100 minimum to open; $8.00 monthly fee",
+      "value_not_used": "the '$XXXX' placeholder on the product page",
+      "source": "https://www.bankofamerica.com/salesservices/deposits/resources/personal-schedule-fees/",
+      "action": "Resolved from the official fee schedule. The product page itself is still broken at capture."
     },
     {
       "id": "F06",
       "severity": "Medium",
       "topic": "American Express National Bank FDIC certificate not retrieved",
-      "detail": "Three FDIC API queries (exact name, prefix wildcard, and web address) returned no institution record for American Express National Bank. American Express states 'Member FDIC' on its own savings pages, so coverage is very likely, but the certificate number is unconfirmed here.",
+      "detail": "FDIC API queries by exact name, prefix wildcard and web address all returned no institution record for American Express National Bank, so the certificate number is blank here even though Amex states 'Member FDIC' and publishes the $250,000 limit on its own pages.",
       "value_used": "blank certificate number",
       "value_not_used": "not guessed",
       "source": "https://banks.data.fdic.gov/bankfind-suite/bankfind?searchTerm=American%20Express%20National%20Bank",
@@ -75,10 +75,10 @@
       "id": "F08",
       "severity": "High",
       "topic": "Discover Bank is shown as inactive by the FDIC",
-      "detail": "The FDIC API record for Discover Bank (certificate 5649, Greenwood, DE) returns ACTIVE = 0. Capital One's official page states that Capital One or Discover Bank deposit accounts opened on or after May 18, 2025 are immediately counted with other Capital One deposit accounts for FDIC coverage. Discover is therefore excluded from the returns tables rather than treated as a separate $250,000 stack.",
-      "value_used": "excluded from returns tables",
+      "detail": "The FDIC API record for Discover Bank (certificate 5649, Greenwood, DE) returns ACTIVE = 0. Capital One's help centre states Discover merged into Capital One on May 18, 2025 and that from November 18, 2025 Capital One and Discover deposit accounts are jointly insured; certain Discover CDs may stay separately insured until maturity. Discover is therefore excluded from the returns tables rather than counted as a separate $250,000 stack.",
+      "value_used": "excluded from returns tables; one combined $250,000 Capital One limit",
       "value_not_used": "any Discover savings APY",
-      "source": "https://api.fdic.gov/banks/institutions?filters=CERT:5649&fields=NAME,CERT,ACTIVE,CITY,STALP,ASSET&format=json",
+      "source": "https://www.capitalone.com/help-center/discover-faqs/",
       "action": "None for a new account; do not count Capital One and Discover as two separate $250,000 banks."
     },
     {
@@ -114,12 +114,12 @@
     {
       "id": "F12",
       "severity": "Low",
-      "topic": "American Express and Schwab print no effective date next to the APY",
-      "detail": "Both pages state the APY without saying when it took effect, so the 'APY as of' column is blank and the capture date (2026-10-22) is recorded instead.",
-      "value_used": "3.20% APY (Amex), 0.15% APY (Schwab)",
-      "value_not_used": "no date inferred",
-      "source": "https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/",
-      "action": "Ask the bank for its Truth-in-Savings disclosure date."
+      "topic": "Schwab prints no effective date next to its APY (Amex resolved)",
+      "detail": "Schwab's Investor Savings page states 0.15% APY without saying when it took effect, so its 'APY as of' cell is blank and the capture date (2026-10-22) is recorded instead. American Express was in the same position on its product page, but its information-protection page carries the disclosure 'The Annual Percentage Yield (APY) as advertised is accurate as of 10/21/2026', so Amex now shows 2026-10-21.",
+      "value_used": "0.15% APY (Schwab) with no as-of date; 3.20% APY as of 2026-10-21 (Amex)",
+      "value_not_used": "no date inferred for Schwab",
+      "source": "https://www.schwab.com/savings",
+      "action": "Ask Schwab for its Truth-in-Savings disclosure date."
     },
     {
       "id": "F13",
@@ -180,6 +180,16 @@
       "value_not_used": "competitor rates quoted on bank marketing pages",
       "source": "https://www.marcus.com/us/en/savings/high-yield-savings",
       "action": "None; recorded for transparency."
+    },
+    {
+      "id": "F19",
+      "severity": "Medium",
+      "topic": "Capital One's own pages give two different start dates for joint Capital One/Discover FDIC coverage",
+      "detail": "The 360 Performance Savings FAQ says Capital One or Discover Bank deposit accounts 'opened on or after May 18, 2025' are immediately counted together for FDIC coverage. Capital One's Discover help centre says that 'starting November 18, 2025' holders of both Capital One and Discover deposit accounts are jointly insured, with some CD exceptions. The merger closed May 18, 2025; the joint-insurance transition date is November 18, 2025.",
+      "value_used": "November 18, 2025 (the more specific statement, from the Discover transition FAQ)",
+      "value_not_used": "May 18, 2025 as the joint-insurance start date",
+      "source": "https://www.capitalone.com/help-center/discover-faqs/",
+      "action": "Confirm current coverage in EDIE if you hold both brands."
     }
   ]
 }

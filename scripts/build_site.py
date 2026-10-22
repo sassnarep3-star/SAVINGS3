@@ -675,9 +675,11 @@ account at an FDIC-insured bank. What changes is how many <em>ownership categori
     <li><strong>POD accounts need real beneficiary data.</strong> Ally's FDIC page notes that naming beneficiaries
         requires identifying information (address, date of birth, government ID number) for each one, to satisfy the
         FDIC's recordkeeping rules. Source: <a href="https://www.ally.com/bank/fdic/" target="_blank" rel="noopener">Ally — FDIC Insurance</a>.</li>
-    <li><strong>Brands are not banks.</strong> Capital One and Discover count as one bank for coverage from
-        May 18, 2025 onward, per Capital One's own page. The FDIC record for Discover Bank shows it as
-        inactive. Two logos can be one $250,000 limit.</li>
+    <li><strong>Brands are not banks.</strong> Capital One's help centre states Discover merged into Capital One
+        on 2025-05-18 and that from <strong>2025-11-18</strong> Capital One and Discover deposit accounts are
+        jointly insured, with some Discover CDs separately insured until maturity. The FDIC record for Discover
+        Bank shows it as inactive. Two logos can be one $250,000 limit.
+        Source: <a href="https://www.capitalone.com/help-center/discover-faqs/" target="_blank" rel="noopener">Capital One — Discover FAQs</a>.</li>
     <li><strong>Network programs have their own terms.</strong> SoFi advertises coverage up to $3M "through a
         network of participating banks". That is a sweep arrangement, not a single-bank limit, and it carries
         program risk that a POD account at one bank does not.</li>
@@ -970,11 +972,13 @@ def build_security():
         if not b:
             continue
         app_badge = badge("Verified" in r["app_status"], "App verified", "App not verified")
+        mfa_link = ("<span class='cell-sub'><a href='" + escape(r["mfa_source"]) + "' target='_blank' rel='noopener'>Security page</a></span>"
+                    if r.get("mfa_source") else "")
         rows += f"""<tr>
   <td><strong>{escape(b["brand"])}</strong><span class="cell-sub">{escape(b["legal_name"])}</span></td>
   <td>{escape(r["app"]) or '<span class="blank">blank</span>'}<span class="cell-sub">{app_badge}</span></td>
   <td>{escape(r["security"])}</td>
-  <td>{escape(r["two_factor"]) or '<span class="blank">blank</span>'}</td>
+  <td>{escape(r["two_factor"]) or '<span class="blank">blank</span>'}{mfa_link}</td>
   <td>{escape(r["notes"])}</td>
   <td><a href="{escape(r["source"])}" target="_blank" rel="noopener">Official page</a></td>
 </tr>"""
@@ -1157,6 +1161,14 @@ def build_method():
     <li>Account-opening identity requirements, funding windows and bonus eligibility were transcribed where the
         bank printed them; they were not tested by opening an account.</li>
   </ul>
+</section>
+
+<section class="section">
+  <h2>Version history</h2>
+  <p class="note">This dashboard is the second research pass and replaces a shorter earlier snapshot, which is
+  kept unchanged at <a href="site/index.html">site/index.html</a>. Both passes agree on every overlapping rate;
+  where they differ in scope, this pass is the superset. The reconciliation is logged in
+  <a href="https://github.com/sassnarep3-star/SAVINGS3/blob/main/COORDINATION.md" target="_blank" rel="noopener">COORDINATION.md</a>.</p>
 </section>
 
 <section class="section">
