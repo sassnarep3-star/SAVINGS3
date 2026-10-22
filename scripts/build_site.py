@@ -263,9 +263,10 @@ def build_index():
         savings APY without a ZIP code or a script, so their rates are left blank here rather than copied
         from a rate aggregator. They are still listed with their fees, minimums and rules.</li>
     <li><strong>Standard branch-network rates are not built to hold large balances.</strong> Every
-        non-promotional rate verified at a branch network on this site falls between
-        {pct(min(r["apy"] for r in ROWS if r["bank_id"] in ("bofa","wellsfargo","usbank","truist","schwab","chase","citi","td") and r["apy"] is not None))}
-        and {pct(max(r["apy"] for r in ROWS if r["bank_id"] in ("bofa","wellsfargo","usbank","truist","schwab","chase","citi","td") and r["apy"] is not None))} APY.
+        standard (non-promotional) rate verified at a branch network on this site falls between
+        {pct(min(r["apy"] for r in ROWS if r["bank_id"] in ("bofa","wellsfargo","usbank","truist","schwab") and r["apy"] is not None and not r.get("promos")))}
+        and {pct(max(r["apy"] for r in ROWS if r["bank_id"] in ("bofa","wellsfargo","usbank","truist","schwab") and r["apy"] is not None and not r.get("promos")))} APY, and the
+        networks that would not publish one (Chase, Citi, TD) are flagged rather than estimated.
         At Bank of America's {pct(bofa['apy'])} a $1.25M balance earns {money(plan_bofa)} a year before fees.
         The same $1.25M at {pct(best_apy)} earns {money(plan_1)}, roughly {plan_1 / plan_bofa:.0f}× more.</li>
     <li><strong>FDIC coverage is a design problem, not a bank problem.</strong> $250,000 per depositor per bank
@@ -528,8 +529,8 @@ year 1 ends {OPEN_DATE[:4]}-10-23 of the following year.</p>
 
 <div class="callout">
   <strong>Formula used:</strong> balance = deposit × (1 + APY)<sup>years</sup>, interest = balance − deposit.
-  The FDIC requires advertised APY to reflect compounding, so this reproduces a bank's own annual disclosure
-  while holding the rate constant. Variable-rate accounts will not hold the rate for 3 or 5 years; those columns
+  An advertised APY already reflects compounding, so this reproduces a bank's own annual disclosure while
+  holding the rate constant. Variable-rate accounts will not hold the rate for 3 or 5 years; those columns
   show what the same rate would produce, not a forecast.
 </div>
 
@@ -667,6 +668,13 @@ account at an FDIC-insured bank. What changes is how many <em>ownership categori
     <li><strong>Interest drifts you over the limit.</strong> Coverage is principal plus interest through the
         date of failure, so a balance parked at exactly $250,000 will grow past the cap. Leave headroom or
         sweep interest out.</li>
+    <li><strong>Branches do not multiply coverage.</strong> The FDIC is explicit: "Deposits in separate branches
+        of an insured bank are not separately insured." Five branches of one bank is still one $250,000 limit.
+        Source: <a href="https://www.fdic.gov/bank-failures/when-bank-fails-facts-depositors-creditors-and-borrowers"
+        target="_blank" rel="noopener">FDIC — When a Bank Fails</a>.</li>
+    <li><strong>POD accounts need real beneficiary data.</strong> Ally's FDIC page notes that naming beneficiaries
+        requires identifying information (address, date of birth, government ID number) for each one, to satisfy the
+        FDIC's recordkeeping rules. Source: <a href="https://www.ally.com/bank/fdic/" target="_blank" rel="noopener">Ally — FDIC Insurance</a>.</li>
     <li><strong>Brands are not banks.</strong> Capital One and Discover count as one bank for coverage from
         May 18, 2025 onward, per Capital One's own page. The FDIC record for Discover Bank shows it as
         inactive. Two logos can be one $250,000 limit.</li>
@@ -1132,7 +1140,7 @@ def build_method():
     <tr><td>Annualised bonus equivalent</td><td>bonus ÷ deposit × 365 ÷ required holding days
         (<a href="https://account.chase.com/consumer/banking/savingsoffer" target="_blank" rel="noopener">example offer</a>)</td></tr>
   </table>
-  <p class="note">APY is required to reflect compounding, so (1 + APY) is the correct one-year factor for a
+  <p class="note">An APY already reflects compounding, so (1 + APY) is the correct one-year factor for a
   lump sum. Holding the same APY for N years is a <em>model</em>: every account on this site is variable-rate
   except the CDs in the context table.</p>
 </section>
